@@ -6,7 +6,6 @@ import image4 from './assets/4.jpg';
 import image5 from './assets/5.jpg';
 import image6 from './assets/6.jpg';
 import image7 from './assets/7.jpg';
-// Sample images (Replace these with actual image paths)
 const images = [
   image1,
   image2,
@@ -21,7 +20,7 @@ const Gallery: React.FC = () => {
     <div className="container mt-5">
       {/* 🔹 Header Section */}
       <h1 className="text-center fw-bold text-primary" style={{ fontSize: "2.5rem" }}>Gallery</h1>
-      <p className="text-center text-muted fs-5">A collection of my work and projects.</p>
+      <p className="text-center text-muted fs-5">A collection of our group project.</p>
 
       {/* 🔹 Image Grid */}
       <div className="row mt-4">

@@ -1,6 +1,16 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
+import first from './assets/Johari.jpg';
+import Second from './assets/image.png';
+import third from './assets/cv1.jpg';
+import fourth from './assets/cv2.png';
+import five from './assets/portfolio.jpg';
+import six from './assets/portfolio2.jpg';
+import seven from './assets/email.jpg';
+import eight from './assets/EMAIL2.jpg';
+import nine from './assets/Black_Doodle_Tools_for_Generating_Ideas_Mind_Map[1].png';
+import ten from './assets/1.pdf';
 type BlogPost = {
   id: number;
   content: string;
@@ -42,13 +52,15 @@ const blogPosts: BlogPost[] = [
             <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">Activity: Group Discussion and Reflection</h3>
             <p style="font-size: 1.3rem;">
                 In class, we participated in a group activity where we discussed and analyzed different real-life scenarios, highlighting the importance of key professional skills. Afterward, we shared our insights and received valuable feedback from our lecturer.
-            </p>
+            </p><br>
+            <div class="text-center">
+            <img src=${first} class="img-fluid rounded shadow-lg" style="height: 500px" alt="Johari Window"></div>
 </div><br>
 <div class="bg-white p-4 rounded shadow-lg">
             <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">Johari Window: Enhancing Self-Awareness</h3>
             <div class="row align-items-center mt-4">
                 <div class="col-lg-5">
-                    <img src="assets/img/weekdetails/johari.png" class="img-fluid rounded shadow-lg" alt="Johari Window">
+                    <img src=${Second} class="img-fluid rounded shadow-lg" alt="Johari Window">
                 </div>
                 <div class="col-lg-7">
                     <p style="font-size: 1.3rem;">
@@ -120,10 +132,10 @@ const blogPosts: BlogPost[] = [
             <div class="bg-white p-4 rounded shadow-lg">
             <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="col-lg-6">
-                    <img src="assets/img/weekdetails/cv1.jpg" class="img-fluid" alt="CV Image 1">
+                    <img src=${third} class="img-fluid" alt="CV Image 1">
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/img/weekdetails/cv2.png" class="img-fluid" alt="CV Image 2">
+                    <img src=${fourth} class="img-fluid" alt="CV Image 2">
                 </div>
             </div>
             </div><br>
@@ -152,17 +164,15 @@ const blogPosts: BlogPost[] = [
     content: `<section class="container mt-5">
     <h1 class="fw-bold text-primary text-center">Portfolio Management</h1>
         <p class="text-muted text-center">By Miss Ishara Raviharee Weerasinghe</p><br>
-    <div class="text-center bg-white p-4 rounded shadow-lg">
-        
         <p class="fs-5 text-dark">
             In this lecture, we explored how to create and manage a well-structured portfolio. The discussion covered key areas such as:
         </p>
         <ul class="list-unstyled text-start d-inline-block fs-5">
+        
             <li><i class="bi bi-check-circle-fill text-success"></i> <b>What are the uses of a portfolio?</b></li>
             <li><i class="bi bi-check-circle-fill text-success"></i> <b>Types of portfolios</b></li>
             <li><i class="bi bi-check-circle-fill text-success"></i> <b>How to create portfolios using online sources</b></li>
         </ul>
-    </div>
 
     <div class="mt-5">
         <div class="bg-white p-4 rounded shadow-lg">
@@ -194,7 +204,7 @@ const blogPosts: BlogPost[] = [
 <div class="bg-white p-4 rounded shadow-lg">
             <div class="row align-items-center mt-4">
                 <div class="col-lg-5">
-                    <img src="assets/img/weekdetails/portfolio2.jpg" class="img-fluid rounded shadow-lg" alt="Portfolio Image">
+                    <img src=${six} class="img-fluid rounded shadow-lg" alt="Portfolio Image">
                 </div>
                 <div class="col-lg-7">
                     <h3 class="fw-bold text-primary">Portfolio Management</h3>
@@ -232,17 +242,15 @@ const blogPosts: BlogPost[] = [
     content: `<section class="container mt-4">
     <h1 class="fw-bold text-primary text-center">Email Etiquette</h1>
     <p class="text-muted text-center">By Miss Ishara Raviharee Weerasinghe</p><br>
-    <div class="text-center bg-white p-4 rounded shadow-lg">
-        <p class="text-muted fs-5"></p>
-        <p class="fs-4 text-dark">
+    <p class="fs-4 text-dark">
             Today’s professional skills lecture focused on email etiquette. Below are some key takeaways:
         </p>
+        
         <ul class="list-unstyled text-start d-inline-block fs-5">
             <li><i class="bi bi-check-circle-fill text-success"></i> <b>What is etiquette?</b></li>
             <li><i class="bi bi-check-circle-fill text-success"></i> <b>What are the Email Etiquettes?</b></li>
             <li><i class="bi bi-check-circle-fill text-success"></i> <b>Advantages and disadvantages of Emails</b></li>
         </ul>
-    </div>
 
     <div class="mt-4">
         <div class="bg-white p-4 rounded shadow-lg">
@@ -270,7 +278,7 @@ const blogPosts: BlogPost[] = [
 
             <div class="row align-items-center mt-3">
                 <div class="col-lg-5">
-                    <img src="assets/img/weekdetails/email.jpg" class="img-fluid rounded shadow-lg" alt="Email Image">
+                    <img src=${seven} class="img-fluid rounded shadow-lg" alt="Email Image">
                 </div>
                 <div class="col-lg-7">
                     <h5 class="fw-bold text-primary">Advantages</h5>
@@ -294,7 +302,7 @@ const blogPosts: BlogPost[] = [
                     </ul>
                 </div>
                 <div class="col-lg-5">
-                    <img src="assets/img/weekdetails/EMAIL2.jpg" class="img-fluid rounded shadow-lg" alt="Email Risks">
+                    <img src=${eight} class="img-fluid rounded shadow-lg" alt="Email Risks">
                 </div>
             </div>
 
@@ -307,13 +315,20 @@ const blogPosts: BlogPost[] = [
                     <li><i class="bi bi-check-circle-fill text-success"></i> Be concise and to the point</li>
                     <li><i class="bi bi-check-circle-fill text-success"></i> Maintain a professional tone</li>
                     <li><i class="bi bi-check-circle-fill text-success"></i> End with a proper sign-off</li>
-                </ul>
+                </ul><br>
+                <img src=${nine} style="width:75%" />
             </div>
 
             <p class="fs-5 mt-3">
                 Following these email etiquette guidelines ensures clear and professional communication in both academic and business settings.
             </p>
-        </div>
+            </div><br>
+            <div class="bg-white p-4 rounded shadow-lg">
+            <h4 class="fw-bold text-primary">Meetings</h4>
+            <p class="fs-5 mt-3">
+                In there we discuss about several meetings and we done class activity.
+            </p>
+            <iframe src=${ten} width="75%" height="600px" style={{ border: "none" }}></iframe>
     </div>
 </section>
 
