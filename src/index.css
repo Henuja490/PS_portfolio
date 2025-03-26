@@ -11,3 +11,222 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* === Custom Navbar Styling === */
+.custom-navbar {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 12px 12px;
+  transition: all 0.3s ease-in-out;
+  padding: 12px 0;
+}
+
+/* Navbar Brand Animation */
+.navbar-brand {
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+}
+
+/* Icon Animation */
+.brand-icon {
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Neon Hover Effect */
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00d4ff;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active Link Highlight */
+.navbar-nav .nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+/* Custom Navbar Toggle Button */
+.custom-toggler {
+  border: none;
+  outline: none;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+}
+
+/* Smooth Open Effect */
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* 🌟 Hero Section with Background Animation */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #479efc, #295694);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+/* ✨ Soft Gradient Overlay */
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+/* 🌟 Content Centering */
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔥 Animated Headline */
+.hero-section h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* 📜 Lead Text Styling */
+.hero-section p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* 🕶️ Fade-in Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✨ Section Styling */
+.about-section {
+  background: #ffffff;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🖼️ Profile Image */
+.profile-img {
+  width: 220px;
+  border-radius: 50%;
+  border: 5px solid #007bff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* 🎨 Highlighted Text */
+.highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* 📖 About Text */
+.about-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* 🎬 Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ✨ Button Styling */
+.btn-primary {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+

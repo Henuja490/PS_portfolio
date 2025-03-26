@@ -3,14 +3,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import logo from './assets/Henuja.png'
 const About: React.FC = () => {
     return (
-      <div className="card p-4 shadow-lg border-0">
-        
-        <h2 className="text-center" style={{fontSize: "3em"}}>About Me</h2><br />
-        <div className="text-center">
-        <img src={logo} alt="" className="rounded" style={{width: 500, alignItems: "center"}} />
-        </div><br></br>
-        <p className="text-center justify-content" style={{fontSize: "1.5em"}}>As a passionate <b>Software Engineering </b>undergraduate, I thrive on blending technology and creativity. My studies have provided me with a strong grasp of programming languages and software development practices. I enjoy collaborating on team projects and participating in hackathons to continuously challenge myself. With a keen interest in AI and machine learning, I am eager to develop innovative software solutions that make a meaningful impact.</p>
-      </div>
+      <div className="about-section card p-5 shadow-lg border-0">
+  <h2 className="text-center section-title">👨‍💻 About Me</h2>
+  
+  <div className="text-center my-4">
+    <img src={logo} alt="Profile" className="profile-img shadow-lg" />
+  </div>
+
+  <p className="about-text text-center">
+    I am a passionate <b>Software Engineering</b> undergraduate, dedicated to merging <span className="highlight">technology</span> and <span className="highlight">creativity</span>.  
+    My academic journey has equipped me with strong programming skills and a deep understanding of <b>software development practices</b>.  
+    I love <b>team collaboration</b>, participating in <b>hackathons</b>, and exploring <span className="highlight">AI & Machine Learning</span> to create innovative solutions that leave a meaningful impact.
+  </p>
+
+  <div className="text-center mt-4">
+    <a href="/assignment" className="btn btn-primary btn-lg shadow-sm">View My Work 🚀</a>
+  </div>
+</div>
+
     );
   };
   
