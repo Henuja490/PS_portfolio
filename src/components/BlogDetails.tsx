@@ -149,11 +149,175 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 3,
-    content: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium...',
+    content: `<section class="container mt-5">
+    <h1 class="fw-bold text-primary text-center">Portfolio Management</h1>
+        <p class="text-muted text-center">By Miss Ishara Raviharee Weerasinghe</p><br>
+    <div class="text-center bg-white p-4 rounded shadow-lg">
+        
+        <p class="fs-5 text-dark">
+            In this lecture, we explored how to create and manage a well-structured portfolio. The discussion covered key areas such as:
+        </p>
+        <ul class="list-unstyled text-start d-inline-block fs-5">
+            <li><i class="bi bi-check-circle-fill text-success"></i> <b>What are the uses of a portfolio?</b></li>
+            <li><i class="bi bi-check-circle-fill text-success"></i> <b>Types of portfolios</b></li>
+            <li><i class="bi bi-check-circle-fill text-success"></i> <b>How to create portfolios using online sources</b></li>
+        </ul>
+    </div>
+
+    <div class="mt-5">
+        <div class="bg-white p-4 rounded shadow-lg">
+            <h3 class="fw-bold text-primary">What Are the Uses of a Portfolio?</h3>
+            <p class="fs-5">
+                We began by discussing the significance of portfolios and how they contribute to professional and academic growth. Portfolios serve various purposes, including:
+            </p>
+            <ul class="fs-5">
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Job Applications</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Career Advancement</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Creative Industries</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Educational Assessments & Admissions</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Freelancing & Consulting</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Professional Development</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Skill Demonstrations</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Entrepreneurship & Networking</b></li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Personal Branding</b></li>
+            </ul>
+</div><br>
+<div class="bg-white p-4 rounded shadow-lg">
+            <h3 class="fw-bold text-primary mt-4">Types of Portfolios</h3>
+            <p class="fs-5">We then explored different types of portfolios, each serving a unique purpose:</p>
+
+            <p class="fs-5"><b>1. Personal Portfolio</b><br> A collection of creative works, projects, and achievements that highlight skills, talents, and interests.</p>
+            <p class="fs-5"><b>2. Career/Dossier Portfolio</b><br> A professional portfolio including resumes, cover letters, references, and documented work experience.</p>
+            <p class="fs-5"><b>3. Employment Portfolio</b><br> A detailed collection of work-related accomplishments and skill evidence.</p>
+            <p class="fs-5"><b>4. Assessment Portfolio</b><br> Used to track learning progress, showcasing growth and achievements over time.</p>
+</div><br>
+<div class="bg-white p-4 rounded shadow-lg">
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-5">
+                    <img src="assets/img/weekdetails/portfolio2.jpg" class="img-fluid rounded shadow-lg" alt="Portfolio Image">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="fw-bold text-primary">Portfolio Management</h3>
+                    <p class="fs-5">
+                        In portfolio management, we covered three essential areas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-light p-4 rounded mt-5">
+                <h3 class="fw-bold text-primary">Creating Portfolios Using Online Platforms</h3>
+                <p class="fs-5">
+                    Finally, we discussed various online platforms that assist in portfolio creation, including:
+                </p>
+                <ul class="fs-5">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>LinkedIn</b> – Professional networking and portfolio showcase</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>Behance</b> – Ideal for creative professionals and designers</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>Google Sites</b> – Simple and free portfolio website creation</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>WordPress & Wix</b> – Advanced portfolio websites with customization</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>GitHub</b> – Perfect for developers to showcase code projects</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>Cargo</b> – Aesthetic portfolios for artists and designers</li>
+                </ul>
+            </div>
+
+            <p class="fs-5 mt-3">
+                These platforms provide structured, professional portfolio creation, helping individuals highlight their skills effectively.
+            </p>
+        </div>
+    </div>
+</section>
+`,
   },
   {
     id: 4,
-    content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip...',
+    content: `<section class="container mt-4">
+    <h1 class="fw-bold text-primary text-center">Email Etiquette</h1>
+    <p class="text-muted text-center">By Miss Ishara Raviharee Weerasinghe</p><br>
+    <div class="text-center bg-white p-4 rounded shadow-lg">
+        <p class="text-muted fs-5"></p>
+        <p class="fs-4 text-dark">
+            Today’s professional skills lecture focused on email etiquette. Below are some key takeaways:
+        </p>
+        <ul class="list-unstyled text-start d-inline-block fs-5">
+            <li><i class="bi bi-check-circle-fill text-success"></i> <b>What is etiquette?</b></li>
+            <li><i class="bi bi-check-circle-fill text-success"></i> <b>What are the Email Etiquettes?</b></li>
+            <li><i class="bi bi-check-circle-fill text-success"></i> <b>Advantages and disadvantages of Emails</b></li>
+        </ul>
+    </div>
+
+    <div class="mt-4">
+        <div class="bg-white p-4 rounded shadow-lg">
+            <h4 class="fw-bold text-primary">What is Etiquette?</h4>
+            <p class="fs-5">
+                Etiquette refers to the set of rules and norms that define appropriate behavior in different situations.
+            </p>
+
+            <h4 class="fw-bold text-primary mt-4">Key Email Etiquette Rules</h4>
+            <p class="fs-5">Essential guidelines when writing professional emails:</p>
+            <ul class="fs-5">
+                <li><i class="bi bi-check-circle-fill text-success"></i> Always include a subject line</li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> Use the recipient’s name in the greeting</li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> Avoid writing in all capitals</li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> Do not discuss confidential information via email</li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> Use proper grammar and spelling</li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> Be mindful of abbreviations and emoticons</li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> Think before you send – review your message carefully</li>
+                <li><i class="bi bi-check-circle-fill text-success"></i> Do not forward unnecessary emails</li>
+            </ul>
+</div><br>
+<div class="bg-white p-4 rounded shadow-lg">
+            <h4 class="fw-bold text-primary mt-4">Advantages & Disadvantages of Emails</h4>
+            <p class="fs-5">Emails provide both benefits and challenges.</p>
+
+            <div class="row align-items-center mt-3">
+                <div class="col-lg-5">
+                    <img src="assets/img/weekdetails/email.jpg" class="img-fluid rounded shadow-lg" alt="Email Image">
+                </div>
+                <div class="col-lg-7">
+                    <h5 class="fw-bold text-primary">Advantages</h5>
+                    <ul class="fs-5">
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Fast & efficient communication</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Written record for future reference</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Supports attachments (documents, images, links)</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> Cost-effective & convenient</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-7">
+                    <h5 class="fw-bold text-danger">Disadvantages</h5>
+                    <ul class="fs-5">
+                        <li><i class="bi bi-x-circle-fill text-danger"></i> Miscommunication due to lack of tone/body language</li>
+                        <li><i class="bi bi-x-circle-fill text-danger"></i> Information overload – managing too many emails</li>
+                        <li><i class="bi bi-x-circle-fill text-danger"></i> Security risks (phishing, spam, hacking threats)</li>
+                        <li><i class="bi bi-x-circle-fill text-danger"></i> Can be time-consuming</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5">
+                    <img src="assets/img/weekdetails/EMAIL2.jpg" class="img-fluid rounded shadow-lg" alt="Email Risks">
+                </div>
+            </div>
+
+            <div class="bg-light p-4 rounded mt-4">
+                <h4 class="fw-bold text-primary">Professional Email Etiquette</h4>
+                <p class="fs-5">Follow these best practices for effective emails:</p>
+                <ul class="fs-5">
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Use a clear subject line</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Start with a proper greeting</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Be concise and to the point</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> Maintain a professional tone</li>
+                    <li><i class="bi bi-check-circle-fill text-success"></i> End with a proper sign-off</li>
+                </ul>
+            </div>
+
+            <p class="fs-5 mt-3">
+                Following these email etiquette guidelines ensures clear and professional communication in both academic and business settings.
+            </p>
+        </div>
+    </div>
+</section>
+
+`,
   },
 ];
 
