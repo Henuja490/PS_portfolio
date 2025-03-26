@@ -14,7 +14,7 @@ code {
 
 /* === Custom Navbar Styling === */
 .custom-navbar {
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8));
+  background: linear-gradient(135deg, rgba(75, 159, 248, 0.8), rgba(63, 104, 148, 0.8));
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 12px 12px;
