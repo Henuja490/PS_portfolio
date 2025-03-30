@@ -1,0 +1,90 @@
+.blog-details-container {
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.blog-post {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.blog-post h1 {
+  font-size: 2.5rem;
+  color: #0277bd;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.blog-post ul {
+  padding-left: 20px;
+}
+
+.blog-post ul li {
+  margin-bottom: 10px;
+}
+
+.blog-header {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blog-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blog-content ul {
+  padding-left: 20px;
+}
+
+.blog-content ul li {
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #003d80, #002244);
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

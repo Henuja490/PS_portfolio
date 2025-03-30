@@ -1,6 +1,7 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
+import './Blogdetails.css'; // Add a custom CSS file for additional styling
 import first from './assets/Johari.jpg';
 import Second from './assets/image.png';
 import third from './assets/cv1.jpg';
@@ -341,23 +342,28 @@ const BlogDetails: React.FC = () => {
   const blogPost = blogPosts.find(post => post.id.toString() === id);
 
   if (!blogPost) {
-    return <p>Post not found!</p>;
+    return (
+      <div className="container text-center mt-5">
+        <h2 className="text-danger">Post Not Found!</h2>
+        <p className="text-muted">The blog post you are looking for does not exist.</p>
+        <Link to="/assignment" className="btn btn-primary mt-3">Back to Assignments</Link>
+      </div>
+    );
   }
 
   return (
-    <div className="container">
+    <div className="container blog-details-container">
       <div className="row">
         <div className="col-lg-12">
-          <div className="blog-post">
-          <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
-              
-    
-
+          <div className="blog-post p-4 rounded shadow-lg">
+            <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
+            <div className="text-center mt-4">
+              <Link to="/assignment" className="btn btn-primary btn-lg shadow-sm">Back to Assignments</Link>
+            </div>
           </div>
         </div>
-        </div>
-        </div>
-    
+      </div>
+    </div>
   );
 };
 

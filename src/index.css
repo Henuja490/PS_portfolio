@@ -12,32 +12,27 @@ code {
     monospace;
 }
 
-/* === Custom Navbar Styling === */
+/* === Enhanced Navbar Styling === */
 .custom-navbar {
-  background: linear-gradient(135deg, rgba(75, 159, 248, 0.8), rgba(63, 104, 148, 0.8));
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 12px 12px;
-  transition: all 0.3s ease-in-out;
-  padding: 12px 0;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Vibrant gradient */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
+  border-radius: 0 0 15px 15px;
 }
 
 /* Navbar Brand Animation */
 .navbar-brand {
-  font-size: 1.7rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
 }
 
 .navbar-brand:hover {
-  transform: scale(1.1);
-}
-
-/* Icon Animation */
-.brand-icon {
-  animation: pulse 1.5s infinite alternate;
+  transform: scale(1.2) rotate(-3deg);
 }
 
 /* Navbar Links */
@@ -50,13 +45,13 @@ code {
   transition: all 0.3s ease-in-out;
 }
 
-/* Neon Hover Effect */
+/* Enhanced Neon Hover Effect */
 .navbar-nav .nav-link::after {
   content: "";
   display: block;
   width: 0;
-  height: 2px;
-  background: #00d4ff;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #00ff85);
   transition: width 0.3s ease-in-out;
 }
 
@@ -96,14 +91,24 @@ code {
   }
 }
 
-/* 🌟 Hero Section with Background Animation */
+/* === Enhanced Hero Section === */
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, #479efc, #295694);
+  background: linear-gradient(135deg, #4a90e2, #003366);
   color: white;
   text-align: center;
   padding: 100px 20px;
   overflow: hidden;
+  animation: backgroundShift 10s infinite alternate;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background: linear-gradient(135deg, #4a90e2, #003366);
+  }
+  100% {
+    background: linear-gradient(135deg, #003366, #4a90e2);
+  }
 }
 
 /* ✨ Soft Gradient Overlay */
@@ -125,19 +130,31 @@ code {
 
 /* 🔥 Animated Headline */
 .hero-section h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   animation: fadeInDown 1s ease-in-out;
+  color: #ffffff; /* Solid white color for the headline */
 }
 
 /* 📜 Lead Text Styling */
 .hero-section p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 400;
   opacity: 0.9;
-  animation: fadeInUp 1s ease-in-out;
+  animation: fadeInUp 1s ease-in-out, textPulse 3s infinite alternate;
+  color: #b0b0b0; /* Softer muted color for the subtext */
+}
+
+@keyframes textPulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* 🕶️ Fade-in Animations */
@@ -217,16 +234,19 @@ code {
   border-radius: 2px;
 }
 
-/* ✨ Button Styling */
+/* ✨ Enhanced Button Styling */
 .btn-primary {
   font-size: 1.2rem;
   padding: 10px 20px;
   border-radius: 8px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-  background: #0056b3;
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 

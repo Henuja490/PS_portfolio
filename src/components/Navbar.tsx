@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
       <div className="container">
         {/* Brand Name with Animation */}
         <Link className="navbar-brand text-white fw-bold" to="/">
-          <span className="brand-icon">📘</span> My Portfolio
+          <span className="brand-icon">🌟</span> My Portfolio
         </Link>
 
         {/* Mobile Toggle Button */}
@@ -23,7 +23,12 @@ const Navbar: React.FC = () => {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className={`nav-link ${location.pathname === `/` ? "active" : ""}`} to={`/`}>
-                  About
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className={`nav-link ${location.pathname === `/about` ? "active" : ""}`} to={`/about`}>
+                About Me
               </Link>
             </li>
             {["Assignment", "Gallery"].map((page) => (

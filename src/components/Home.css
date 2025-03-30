@@ -1,0 +1,275 @@
+.home-section {
+  max-width: 1200px; /* Adjust the width of the page */
+  margin: auto;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.home-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.about-details {
+  font-size: 1.5rem; /* Increased font size for better readability */
+  line-height: 1.8;
+  color: #555;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #0056b3; /* Slightly darker blue for better contrast */
+}
+
+.home-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  border: 8px solid #007bff; /* Added border for emphasis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.1) rotate(3deg); /* Added rotation effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-preview, .assignments-preview {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-preview:hover, .assignments-preview:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.assignment-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.assignment-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #007bff;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.btn-outline-primary {
+  border: 2px solid #007bff;
+  color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: #007bff;
+  color: #ffffff;
+}
+
+.developed-by {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.developer-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid #007bff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.developer-details {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.team-work-section {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-work-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.team-work-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.team-work-section .btn-primary {
+  background: #007bff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-work-section .btn-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.highlights-section {
+  margin-top: 40px;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Subtle gradient */
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.testimonials-section {
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 5px solid #007bff; /* Added border for emphasis */
+  padding-left: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.cta-section {
+  margin-top: 40px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Subtle gradient */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.cta-section .btn-primary {
+  background: linear-gradient(135deg, #0056b3, #003d80); /* Enhanced gradient */
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+  transform: scale(1.2); /* Increased hover scale */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skills-section {
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #f1f8e9, #c5e1a5); /* Green gradient for skills */
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.projects-section {
+  margin-top: 40px;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Pink gradient for projects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #007bff;
+}
+
+.project-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}

@@ -1,0 +1,42 @@
+.assignment-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Subtle gradient */
+}
+
+.assignment-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #007bff;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0056b3; /* Enhanced color for better contrast */
+}
+
+.post-author-img {
+  border: 3px solid #0056b3; /* Thicker border for emphasis */
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.post-meta .post-author {
+  font-weight: bold;
+  color: #003d80; /* Darker blue for better readability */
+}
+
+.post-meta .post-date {
+  font-size: 0.85rem;
+  color: #777;
+}

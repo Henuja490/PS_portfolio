@@ -1,0 +1,55 @@
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #4a90e2, #003366);
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  overflow: hidden;
+  animation: backgroundShift 10s infinite alternate;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background: linear-gradient(135deg, #4a90e2, #003366);
+  }
+  100% {
+    background: linear-gradient(135deg, #003366, #4a90e2);
+  }
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section .solid-text {
+  color: #ffffff; /* Solid white color for the headline */
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

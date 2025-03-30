@@ -1,6 +1,7 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom';
+import './Assignment.css'; // Add a custom CSS file for additional styling
 
 // Import images correctly
 import authorImage from './assets/Henuja.png';
@@ -8,7 +9,6 @@ import Week1 from './assets/week1.jpg';
 import Week2 from './assets/week2.jpg';
 import Week3 from './assets/week3.png';
 import Week4 from './assets/week4.jpg';
-
 
 type BlogPost = {
   id: number;
@@ -22,7 +22,7 @@ type BlogPost = {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: 'Introduction to professional skills',
+    title: 'Introduction to Professional Skills',
     author: 'Henuja Katuwapitiya',
     date: 'Week 1',
     image: Week1,
@@ -46,45 +46,40 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: 4,
-    title: 'Email Etiquettes and Mettings',
+    title: 'Email Etiquettes and Meetings',
     author: 'Henuja Katuwapitiya',
     date: 'Week 4',
     image: Week4,
-    authorImage: authorImage,
-  },
-  {
-    id: 5,
-    title: 'Email Etiquette',
-    author: 'Henuja Katuwapitiya',
-    date: 'Week 4',
-    image: 'assets/img/blog/blog-4.jpg',
     authorImage: authorImage,
   },
 ];
 
 const Assignment: React.FC = () => {
   return (
-    <div className="container">
+    <div className="container mt-5">
+      <h1 className="text-center fw-bold text-primary mb-4">Assignments</h1>
+      <p className="text-center text-muted fs-5">Explore my weekly assignments and learnings.</p>
       <div className="row gy-4">
         {blogPosts.map((post) => (
           <div key={post.id} className="col-lg-4 col-md-6">
-            <div className="card">
+            <div className="card assignment-card shadow-sm border-0">
               <img src={post.image} className="card-img-top" alt={post.title} />
               <div className="card-body">
-                <h5 className="card-title">
-                    <Link to={`/assignment/${post.id}`}>{post.title}</Link>
+                <h5 className="card-title text-primary">
+                  <Link to={`/assignment/${post.id}`} className="text-decoration-none">
+                    {post.title}
+                  </Link>
                 </h5>
-
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center mt-3">
                   <img
-                    src={post.authorImage} // Use the author image passed from the blog post
+                    src={post.authorImage}
                     alt={post.author}
                     className="img-fluid post-author-img flex-shrink-0"
                     style={{ width: '40px', height: '40px', borderRadius: '50%' }}
                   />
                   <div className="post-meta ms-2">
-                    <p className="post-author">{post.author}</p>
-                    <p className="post-date">
+                    <p className="post-author mb-0">{post.author}</p>
+                    <p className="post-date mb-0">
                       <time dateTime={post.date}>{post.date}</time>
                     </p>
                   </div>

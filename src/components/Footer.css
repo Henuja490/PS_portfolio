@@ -1,0 +1,48 @@
+.footer {
+  background: #000000; /* Changed to solid black background */
+  color: #ffffff;
+}
+
+.footer h5 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  font-size: 0.95rem;
+  color: #d1d1d1;
+}
+
+.footer a {
+  color: #00d4ff;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #00ff85;
+}
+
+.social-icon {
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #00ff85;
+}
+
+.scroll-to-top {
+  background: linear-gradient(135deg, #00d4ff, #00ff85);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
