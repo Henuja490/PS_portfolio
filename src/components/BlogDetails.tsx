@@ -14,6 +14,8 @@ import nine from './assets/Black_Doodle_Tools_for_Generating_Ideas_Mind_Map[1].p
 import ten from './assets/1.pdf';
 import image7 from './assets/7.jpg';
 import image5 from './assets/5.jpg';
+import image8 from './assets/work.jpg';
+import image9 from './assets/work2.jpg';
 type BlogPost = {
   id: number;
   content: string;
@@ -622,19 +624,13 @@ const blogPosts: BlogPost[] = [
 
     <div class="bg-white p-4 rounded shadow-lg">
         <h4 class="fw-bold text-primary">EI Activity</h4>
-        <p class="fs-5">In this activity, participants engaged in various exercises to develop and assess their emotional intelligence skills.</p>
-        <ul class="fs-5">
-            <li>Self-awareness exercise: Identifying personal emotional triggers</li>
-            <li>Empathy mapping: Understanding others' perspectives</li>
-            <li>Role-playing scenarios to practice conflict resolution</li>
-            <li>Team-building exercises to enhance social skills</li>
-        </ul>
+        <p class="fs-5">We have done some class activities in the lecture time</p>
         <div class="row">
-            <div class="col-lg-6">
-                <img src="assets/img/activity1.jpg" class="img-fluid rounded shadow" alt="Self-awareness exercise">
+            <div class="col-lg-5">
+                <img src=${image8} class="img-fluid rounded shadow" alt="Self-awareness exercise">
             </div>
-            <div class="col-lg-6">
-                <img src="assets/img/activity2.jpg" class="img-fluid rounded shadow" alt="Empathy mapping exercise">
+            <div class="col-lg-5">
+                <img src=${image9} class="img-fluid rounded shadow" alt="Empathy mapping exercise">
             </div>
         </div>
     </div>
