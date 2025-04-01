@@ -9,7 +9,10 @@ import Week1 from './assets/week1.jpg';
 import Week2 from './assets/week2.jpg';
 import Week3 from './assets/week3.png';
 import Week4 from './assets/week4.jpg';
-
+import Week5 from './assets/10.webp'; // New blog image
+import Week6 from './assets/11.webp'; 
+import Week7 from './assets/9.webp'; 
+import Week8 from './assets/week8.jpg'; 
 type BlogPost = {
   id: number;
   title: string;
@@ -27,6 +30,13 @@ const blogPosts: BlogPost[] = [
     date: 'Week 1',
     image: Week1,
     authorImage: authorImage,
+  },{
+    id: 6,
+    title: 'Food Festival',
+    author: 'Henuja Katuwapitiya',
+    date: 'Week 6',
+    image: Week6, // New blog image
+    authorImage: authorImage,
   },
   {
     id: 2,
@@ -43,15 +53,40 @@ const blogPosts: BlogPost[] = [
     date: 'Week 3',
     image: Week3,
     authorImage: authorImage,
-  },
+  }
+    ,{
+      id: 7,
+      title: 'Interview Skills',
+      author: 'Henuja Katuwapitiya',
+      date: 'Week 7',
+      image: Week7, // New blog image
+      authorImage: authorImage,
+    },{
+      id: 4,
+      title: 'Email Etiquettes and Meetings',
+      author: 'Henuja Katuwapitiya',
+      date: 'Week 4',
+      image: Week4,
+      authorImage: authorImage,
+    }
+    ,
+  
   {
-    id: 4,
-    title: 'Email Etiquettes and Meetings',
+    id: 5,
+    title: 'Telephone Etiquettes',
     author: 'Henuja Katuwapitiya',
-    date: 'Week 4',
-    image: Week4,
+    date: 'Week 5',
+    image: Week5, // New blog image
     authorImage: authorImage,
-  },
+  },{
+      id: 8,
+      title: 'Emotional Intelligence',
+      author: 'Henuja Katuwapitiya',
+      date: 'Week 8',
+      image: Week8, // New blog image
+      authorImage: authorImage,
+    }
+  
 ];
 
 const Assignment: React.FC = () => {
