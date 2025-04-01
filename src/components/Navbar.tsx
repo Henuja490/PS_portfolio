@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className={`nav-link ${location.pathname === `/` ? "active" : ""}`} to={`/`}>
+              <Link className={`nav-link ${location.pathname === `/PS_portfolio` ? "active" : ""}`} to={`/`}>
                 Home
               </Link>
             </li>
