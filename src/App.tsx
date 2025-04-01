@@ -16,8 +16,9 @@ const App: React.FC = () => {
       <Navbar />
       <Hero />
       <div className="container mt-5">
+      
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/PS_portfolio" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/assignment" element={<Assignment />} />
           <Route path="/gallery" element={<Gallery />} />
