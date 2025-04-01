@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -12,13 +12,13 @@ import BlogDetails from './components/BlogDetails';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <BrowserRouter basename='/PS_portfolio'>
       <Navbar />
       <Hero />
       <div className="container mt-5">
       
         <Routes>
-          <Route path="/PS_portfolio" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/assignment" element={<Assignment />} />
           <Route path="/gallery" element={<Gallery />} />
@@ -26,7 +26,7 @@ const App: React.FC = () => {
         </Routes>
       </div><br></br>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 };
 
