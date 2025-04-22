@@ -1,666 +1,625 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import "bootstrap/dist/css/bootstrap.min.css";
-import './Blogdetails.css'; // Add a custom CSS file for additional styling
-import first from './assets/Johari.jpg';
-import Second from './assets/image.png';
-import third from './assets/cv1.jpg';
-import fourth from './assets/cv2.png';
-import five from './assets/portfolio.jpg';
-import six from './assets/portfolio2.jpg';
-import seven from './assets/email.jpg';
-import eight from './assets/EMAIL2.jpg';
-import nine from './assets/Black_Doodle_Tools_for_Generating_Ideas_Mind_Map[1].png';
-import ten from './assets/1.pdf';
-import image7 from './assets/7.jpg';
-import image5 from './assets/5.jpg';
-import image8 from './assets/work.jpg';
-import image9 from './assets/work2.jpg';
+import React, { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./Blogdetails.css"; // Custom CSS for styling
+import first from "./assets/Johari.jpg";
+import second from "./assets/image.png";
+import third from "./assets/cv1.jpg";
+import fourth from "./assets/cv2.png";
+import five from "./assets/portfolio.jpg";
+import six from "./assets/portfolio2.jpg";
+import seven from "./assets/email.jpg";
+import eight from "./assets/EMAIL2.jpg";
+import nine from "./assets/Black_Doodle_Tools_for_Generating_Ideas_Mind_Map[1].png";
+import ten from "./assets/1.pdf";
+import image5 from "./assets/5.jpg";
+import image7 from "./assets/7.jpg";
+import image8 from "./assets/work.jpg";
+import image9 from "./assets/work2.jpg";
+import image10 from "./assets/MEAL.jpg";
+import image11 from "./assets/din2.jpg";
+import image12 from "./assets/din3.jpg";
+
+// Initialize AOS
+const initializeAOS = () => {
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+  });
+};
+
 type BlogPost = {
   id: number;
   content: string;
+  title: string;
+  subtitle: string;
 };
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
+    title: "Mastering Professional Skills",
+    subtitle: "Building the Foundation for Career Success",
     content: `
-    <section class="container mt-5">
-    
-        <h1 class="text-center fw-bold text-primary" style="font-size: 2.3rem;">Introduction to Professional Skills</h1>
-        <p class=" text-center text-muted" style="font-size: 1.2rem;">By Miss Ishara Raviharee Weerasinghe</p><br>
-        <p class="fs-5 text-dark" style="font-size: 1.4rem;">
-            In this lecture, we explored various professional skills and their importance in the modern workplace. Key topics discussed include:
-        </p>
-        <ul class="list-unstyled text-start d-inline-block" style="font-size: 1.3rem;">
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>What are Professional Skills?</b></li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>Why are Professional Skills Crucial for Career Growth?</b></li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>How to Develop and Master Professional Skills?</b></li>
-        </ul>
-    </div>
-
-    <div class="mt-5">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary" style="font-size: 2.3rem;">Defining Professional Skills</h3>
-            <p style="font-size: 1.3rem;">
-                Professional skills, also known as soft skills or interpersonal skills, are crucial for success in any career. These skills go beyond technical expertise, focusing on communication, problem-solving, and teamwork. They are essential for building relationships, managing tasks effectively, and contributing to a positive workplace environment.
-            </p>
-            <h4 style="font-size: 1.6rem;">Examples of Professional Skills</h4>
-            <p style="font-size: 1.3rem;"><b>Effective communication, collaboration, conflict resolution, adaptability, leadership, emotional intelligence.</b></p>
-         </div><br>
-         <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">Key Skills for Career Advancement</h3>
-            <p style="font-size: 1.3rem;">
-                In the modern job market, a combination of technical and soft skills is necessary for career success. Skills like critical thinking, leadership, and communication are essential in almost any role, making it important to continuously develop them.
-            </p>
-
-            <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">Activity: Group Discussion and Reflection</h3>
-            <p style="font-size: 1.3rem;">
-                In class, we participated in a group activity where we discussed and analyzed different real-life scenarios, highlighting the importance of key professional skills. Afterward, we shared our insights and received valuable feedback from our lecturer.
-            </p><br>
-            <div class="text-center">
-            <img src=${first} class="img-fluid rounded shadow-lg" style="height: 500px" alt="Johari Window"></div>
-</div><br>
-<div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">Johari Window: Enhancing Self-Awareness</h3>
-            <div class="row align-items-center mt-4">
-                <div class="col-lg-5">
-                    <img src=${Second} class="img-fluid rounded shadow-lg" alt="Johari Window">
-                </div>
-                <div class="col-lg-7">
-                    <p style="font-size: 1.3rem;">
-                        The Johari Window model, created by Joseph Luft and Harrington Ingham, promotes self-awareness by helping individuals understand the differences between how they see themselves and how others perceive them. This concept is a valuable tool for personal and professional growth.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-light p-4 rounded mt-5">
-                <h3 class="fw-bold text-primary" style="font-size: 2.3rem;">Practical Tips for Improving Professional Skills</h3>
-                <ul class="list-unstyled text-start d-inline-block fs-5">
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Step outside your comfort zone to tackle new challenges.</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Actively seek feedback from peers and mentors to enhance your abilities.</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Commit to continuous learning and development, both inside and outside of work.</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Collaborate with others to improve teamwork and problem-solving skills.</li>
-                </ul>
-            </div>
-
-            <p class="mt-3" style="font-size: 1.3rem;">
-                This lecture has been an eye-opener, providing essential tools for improving both our personal and professional lives.
-            </p>
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Mastering Professional Skills</h1>
+          <p class="lead text-muted">By Miss Ishara Raviharee Weerasinghe</p>
+          <p class="text-dark fs-5">In today’s dynamic workplace, professional skills—often called soft skills—are the cornerstone of career success. This lecture offered a deep dive into their importance, providing actionable insights to enhance personal and professional growth.</p>
         </div>
-    </div>
-</section>
-
-  `,
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">What Are Professional Skills?</h3>
+          <p class="fs-5 text-dark">
+            Professional skills encompass interpersonal and emotional competencies that complement technical expertise. Unlike hard skills, which are job-specific, soft skills like communication, teamwork, and adaptability are universally applicable. This session explored:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> The definition and scope of professional skills</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Their critical role in fostering career advancement</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Practical strategies for developing and mastering these skills</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            For example, effective communication ensures clarity in team projects, while adaptability allows professionals to thrive in fast-paced environments. These skills create a positive workplace culture and open doors to leadership opportunities.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">The Johari Window:izion</h3>
+          <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <img src=${first} class="img-fluid rounded shadow-lg" alt="Johari Window" />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+              <p class="fs-5 text-dark">
+                The Johari Window, developed by Joseph Luft and Harrington Ingham, is a transformative tool for self-awareness. It categorizes personal traits into four quadrants: open, hidden, blind, and unknown. By understanding how we perceive ourselves versus how others see us, we can improve communication, build trust, and foster personal growth. In class, we analyzed real-life scenarios to apply this model, gaining insights into our strengths and areas for improvement.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Practical Tips for Skill Development</h3>
+          <p class="fs-5 text-dark">
+            Developing professional skills requires intentional effort and practice. Here are actionable tips shared during the lecture:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Step out of your comfort zone by taking on new challenges, such as leading a project.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Seek constructive feedback from peers and mentors to identify growth areas.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Commit to continuous learning through workshops, courses, or reading.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Collaborate with diverse teams to enhance teamwork and problem-solving skills.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            This lecture was a game-changer, equipping us with tools to navigate professional challenges and build meaningful workplace relationships.
+          </p>
+        </div>
+      </section>
+    `,
   },
   {
     id: 2,
-    content: `<section class="container mt-5">
-    <h1 class="fw-bold text-primary text-center" style="font-size: 2.5rem;">CV Writing and Writing Cover Letters</h1>
-    <p class="text-center">By Miss Ishara Raviharee Weerasinghe </p> 
-    <div class= bg-white p-4 rounded shadow-lg">
-         
-        <p style="font-size: 1.4rem; color: darkslategrey;">
-            In this lecture, we discussed how to create a professional curriculum vitae (CV). A CV is a very important document that gives someone an overall idea about the person. So basically, in this lecture, we discussed CV writing and cover letter writing. <br> So, what are the main points?
-        </p>
-        <div class="text-left">
-        <ul class="list-unstyled text-start d-inline-block fs-5">
-            <li><i class="bi bi-check-circle-fill"></i> <span><b>Identify the structure of a CV</b></span></li>
-            <li><i class="bi bi-check-circle-fill"></i> <span><b>Recognize the registers used in cover letter writing</b></span></li>
-            <li><i class="bi bi-check-circle-fill"></i> <span><b>Create a professional CV</b></span></li>
-        </ul>
+    title: "Crafting a Winning CV and Cover Letter",
+    subtitle: "Your Key to Unlocking Career Opportunities",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Crafting a Winning CV and Cover Letter</h1>
+          <p class="lead text-muted">By Miss Ishara Raviharee Weerasinghe</p>
+          <p class="text-dark fs-5">A well-crafted CV and cover letter are your first impression in the job market. This lecture provided a comprehensive guide to creating documents that showcase your skills and stand out to employers.</p>
         </div>
-    </div>
-    
-    <div class="mt-5">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary" style="font-size: 2.3rem;">What is a CV?</h3>
-            <p style="font-size: 1.3rem;">
-                A Curriculum Vitae (CV) is an extensive document that provides a summary of your training, professional background, achievements, abilities, and more. Its goal is to highlight your skills and fit for a particular position.
-            </p>
-      </div><br>
-            <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">What Have I Learned?</h3>
-            <p style="font-size: 1.3rem;">
-                A well-crafted CV is very important, especially in today's job market. By tailoring my CV to the specific job I'm applying for, I can highlight the most relevant skills and experiences. For example, in a marketing role, I would focus on my creative skills and campaign successes. In a technical role, I would emphasize my programming skills and technical certifications.
-                A tailored CV shows my genuine interest in the role and that I have researched the company. It also helps my CV pass through automated systems by using the right keywords from the job description. By directly addressing the job requirements, I can show why I am the ideal candidate for the position.
-            </p>
-            <p style="font-size: 1.3rem;">
-                The first step in creating a strong CV is creating a header with name and contact details clearly displayed. A compelling aim or summary that simply summarizes job goals and essential skills must come next. Provide a thorough work experience section with a list of previous roles. Include a section on your education that lists your degrees and any relevant courses you've taken. Remember to include a section on skills related to the position. To present a complete picture of your background, lastly think about including areas for certificates, professional associations, and any service projects.
-            </p>
-            </div><br>
-            <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">Activity</h3>
-            <p style="font-size: 1.3rem;">
-                We were given a paper to fill in the empty spaces on a CV during the lesson. Then, we got a few advertisements asking us to create good cover letters.
-            </p>
-            <div class="bg-white p-4 rounded shadow-lg">
-            <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-6">
-                    <img src=${third} class="img-fluid" alt="CV Image 1">
-                </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <img src=${fourth} class="img-fluid" alt="CV Image 2">
-                </div>
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">The Anatomy of a Professional CV</h3>
+          <p class="fs-5 text-dark">
+            A curriculum vitae (CV) is a detailed summary of your education, experience, skills, and achievements. It’s more than a resume—it’s a narrative of your professional journey. Key takeaways included:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Structuring a CV with clear sections: header, summary, experience, education, and skills.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Tailoring content to match job descriptions, using relevant keywords.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Highlighting achievements with quantifiable metrics (e.g., “Increased sales by 20%”).</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            For instance, a marketing professional might emphasize campaign successes, while a software developer would highlight technical certifications. Tailoring ensures your CV passes automated applicant tracking systems and resonates with hiring managers.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">Writing a Compelling Cover Letter</h3>
+          <p class="fs-5 text-dark">
+            A cover letter complements your CV by telling a story about why you’re the perfect fit. We learned to:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Start with a strong opening, mentioning the job and source of the posting.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Highlight relevant skills with specific examples (e.g., “Led a team of 5 to deliver a project under budget”).</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Express enthusiasm for the role and company, showing research and alignment with their values.</li>
+          </ul>
+          <div class="row mt-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <img src=${third} class="img-fluid rounded shadow-lg" alt="CV Example 1" />
             </div>
-            </div><br>
-            <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">How to Write My Cover Letter?</h3>
-            <p style="font-size: 1.3rem;">
-                Begin the cover paragraph by stating the job for which you have applied and the source of the job posting. Next, provide an introduction of your most pertinent experience and abilities, explaining how they meet the job requirements with specific examples. Finally, express how excited you are about the position and the firm, and that you would like to discuss more about how you can contribute to the team.
-            </p>
-            </div><br>
-            <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary mt-4" style="font-size: 2.3rem;">What Have I Learned from This Lecture?</h3>
-            <ul style="font-size: 1.3rem;">
-                <li>Identify the structure of a CV and cover letter.</li>
-                <li>Recognize the registers used in cover letter writing.</li>
-                <li>Write a cover letter with reference to a job advertisement.</li>
-                <li>How to create a professional CV.</li>
-            </ul>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+              <img src=${fourth} class="img-fluid rounded shadow-lg" alt="CV Example 2" />
+            </div>
+          </div>
+          <p class="fs-5 text-dark mt-4">
+            In a class activity, we filled out CV templates and drafted cover letters for sample job ads. This hands-on practice helped us understand how to align our documents with employer expectations.
+          </p>
         </div>
-    </div>
-</section>
-
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Key Takeaways</h3>
+          <p class="fs-5 text-dark">
+            This lecture emphasized the importance of customization and clarity. A tailored CV and cover letter demonstrate genuine interest, showcase relevant skills, and increase your chances of landing an interview. By mastering these tools, we’re better equipped to navigate the competitive job market.
+          </p>
+        </div>
+      </section>
     `,
   },
   {
     id: 3,
-    content: `<section class="container mt-5">
-    <h1 class="fw-bold text-primary text-center">Portfolio Management</h1>
-        <p class="text-muted text-center">By Miss Ishara Raviharee Weerasinghe</p><br>
-        <p class="fs-5 text-dark">
-            In this lecture, we explored how to create and manage a well-structured portfolio. The discussion covered key areas such as:
-        </p>
-        <ul class="list-unstyled text-start d-inline-block fs-5">
-        
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>What are the uses of a portfolio?</b></li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>Types of portfolios</b></li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>How to create portfolios using online sources</b></li>
-        </ul>
-
-    <div class="mt-5">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary">What Are the Uses of a Portfolio?</h3>
-            <p class="fs-5">
-                We began by discussing the significance of portfolios and how they contribute to professional and academic growth. Portfolios serve various purposes, including:
-            </p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Job Applications</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Career Advancement</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Creative Industries</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Educational Assessments & Admissions</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Freelancing & Consulting</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Professional Development</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Skill Demonstrations</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Entrepreneurship & Networking</b></li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Personal Branding</b></li>
-            </ul>
-</div><br>
-<div class="bg-white p-4 rounded shadow-lg">
-            <h3 class="fw-bold text-primary mt-4">Types of Portfolios</h3>
-            <p class="fs-5">We then explored different types of portfolios, each serving a unique purpose:</p>
-
-            <p class="fs-5"><b>1. Personal Portfolio</b><br> A collection of creative works, projects, and achievements that highlight skills, talents, and interests.</p>
-            <p class="fs-5"><b>2. Career/Dossier Portfolio</b><br> A professional portfolio including resumes, cover letters, references, and documented work experience.</p>
-            <p class="fs-5"><b>3. Employment Portfolio</b><br> A detailed collection of work-related accomplishments and skill evidence.</p>
-            <p class="fs-5"><b>4. Assessment Portfolio</b><br> Used to track learning progress, showcasing growth and achievements over time.</p>
-</div><br>
-<div class="bg-white p-4 rounded shadow-lg">
-            <div class="row align-items-center mt-4">
-                <div class="col-lg-5">
-                    <img src=${six} class="img-fluid rounded shadow-lg" alt="Portfolio Image">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="fw-bold text-primary">Portfolio Management</h3>
-                    <p class="fs-5">
-                        In portfolio management, we covered three essential areas.
-                    </p>
-                </div>
-            </div>
-
-            <div class="bg-light p-4 rounded mt-5">
-                <h3 class="fw-bold text-primary">Creating Portfolios Using Online Platforms</h3>
-                <p class="fs-5">
-                    Finally, we discussed various online platforms that assist in portfolio creation, including:
-                </p>
-                <ul class="list-unstyled text-start d-inline-block fs-5">
-                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>LinkedIn</b> – Professional networking and portfolio showcase</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>Behance</b> – Ideal for creative professionals and designers</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>Google Sites</b> – Simple and free portfolio website creation</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>WordPress & Wix</b> – Advanced portfolio websites with customization</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>GitHub</b> – Perfect for developers to showcase code projects</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> <b>Cargo</b> – Aesthetic portfolios for artists and designers</li>
-                </ul>
-            </div>
-
-            <p class="fs-5 mt-3">
-                These platforms provide structured, professional portfolio creation, helping individuals highlight their skills effectively.
-            </p>
+    title: "Portfolio Management",
+    subtitle: "Showcasing Your Skills and Achievements",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Portfolio Management</h1>
+          <p class="lead text-muted">By Miss Ishara Raviharee Weerasinghe</p>
+          <p class="text-dark fs-5">A portfolio is a powerful tool to display your work and achievements. This lecture explored how to create, manage, and leverage portfolios for professional and academic success.</p>
         </div>
-    </div>
-</section>
-`,
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">Why Portfolios Matter</h3>
+          <p class="fs-5 text-dark">
+            Portfolios are more than collections of work—they’re a testament to your skills, creativity, and growth. They serve multiple purposes, such as:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Enhancing job applications by showcasing tangible evidence of skills.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Supporting career advancement through documented achievements.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Building personal branding for freelancers, creatives, and entrepreneurs.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            For example, a graphic designer’s portfolio might include branding projects, while a developer’s could feature GitHub repositories. Portfolios make your capabilities visible and memorable.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">Types of Portfolios</h3>
+          <p class="fs-5 text-dark">
+            We explored various portfolio types, each tailored to specific goals:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Personal Portfolio:</b> Highlights creative works, projects, and passions.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Career/Dossier Portfolio:</b> Includes resumes, references, and professional experience.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Employment Portfolio:</b> Focuses on work-related accomplishments and skills.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Assessment Portfolio:</b> Tracks learning progress for educational purposes.</li>
+          </ul>
+          <div class="row mt-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <img src=${six} class="img-fluid rounded shadow-lg" alt="Portfolio Example" />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+              <p class="fs-5 text-dark">
+                In a class discussion, we analyzed sample portfolios to understand their structure and impact. This exercise highlighted the importance of curating content that aligns with your career goals.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Creating Portfolios Online</h3>
+          <p class="fs-5 text-dark">
+            Online platforms make portfolio creation accessible and professional. Recommended tools include:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>LinkedIn:</b> For professional networking and showcasing achievements.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Behance:</b> Ideal for designers and creatives to display visual work.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>GitHub:</b> Perfect for developers to share code and projects.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>WordPress/Wix:</b> For customizable portfolio websites.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            By leveraging these platforms, you can create a polished portfolio that reflects your unique strengths and attracts opportunities.
+          </p>
+        </div>
+      </section>
+    `,
   },
   {
     id: 4,
-    content: `<section class="container mt-4">
-    <h1 class="fw-bold text-primary text-center">Email Etiquette</h1>
-    <p class="text-muted text-center">By Miss Ishara Raviharee Weerasinghe</p><br>
-    <p class="fs-4 text-dark">
-            Today’s professional skills lecture focused on email etiquette. Below are some key takeaways:
-        </p>
-        
-        <ul class="list-unstyled text-start d-inline-block fs-5">
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>What is etiquette?</b></li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>What are the Email Etiquettes?</b></li>
-            <li><i class="bi bi-check-circle-fill text-success"></i> <b>Advantages and disadvantages of Emails</b></li>
-        </ul>
-
-    <div class="mt-4">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary">What is Etiquette?</h4>
-            <p class="fs-5">
-                Etiquette refers to the set of rules and norms that define appropriate behavior in different situations.
-            </p>
-
-            <h4 class="fw-bold text-primary mt-4">Key Email Etiquette Rules</h4>
-            <p class="fs-5">Essential guidelines when writing professional emails:</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Always include a subject line</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Use the recipient’s name in the greeting</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Avoid writing in all capitals</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Do not discuss confidential information via email</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Use proper grammar and spelling</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Be mindful of abbreviations and emoticons</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Think before you send – review your message carefully</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Do not forward unnecessary emails</li>
-            </ul>
-</div><br>
-<div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Advantages & Disadvantages of Emails</h4>
-            <p class="fs-5">Emails provide both benefits and challenges.</p>
-
-            <div class="row align-items-center mt-3">
-                <div class="col-lg-5">
-                    <img src=${seven} class="img-fluid rounded shadow-lg" alt="Email Image">
-                </div>
-                <div class="col-lg-7">
-                    <h5 class="fw-bold text-primary">Advantages</h5>
-                    <ul class="list-unstyled text-start d-inline-block fs-5">
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Fast & efficient communication</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Written record for future reference</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Supports attachments (documents, images, links)</li>
-                        <li><i class="bi bi-check-circle-fill text-success"></i> Cost-effective & convenient</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row align-items-center mt-4">
-                <div class="col-lg-7">
-                    <h5 class="fw-bold text-danger">Disadvantages</h5>
-                    <ul class="list-unstyled text-start d-inline-block fs-5">
-                        <li><i class="bi bi-x-circle-fill text-danger"></i> Miscommunication due to lack of tone/body language</li>
-                        <li><i class="bi bi-x-circle-fill text-danger"></i> Information overload – managing too many emails</li>
-                        <li><i class="bi bi-x-circle-fill text-danger"></i> Security risks (phishing, spam, hacking threats)</li>
-                        <li><i class="bi bi-x-circle-fill text-danger"></i> Can be time-consuming</li>
-                    </ul>
-                </div>
-                <div class="col-lg-5">
-                    <img src=${eight} class="img-fluid rounded shadow-lg" alt="Email Risks">
-                </div>
-            </div>
-
-            <div class="bg-light p-4 rounded mt-4">
-                <h4 class="fw-bold text-primary">Professional Email Etiquette</h4>
-                <p class="fs-5">Follow these best practices for effective emails:</p>
-                <ul class="list-unstyled text-start d-inline-block fs-5">
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Use a clear subject line</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Start with a proper greeting</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Be concise and to the point</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> Maintain a professional tone</li>
-                    <li><i class="bi bi-check-circle-fill text-success"></i> End with a proper sign-off</li>
-                </ul><br>
-                <img src=${nine} style="width:75%" />
-            </div>
-
-            <p class="fs-5 mt-3">
-                Following these email etiquette guidelines ensures clear and professional communication in both academic and business settings.
-            </p>
-            </div><br>
-            <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary">Meetings</h4>
-            <p class="fs-5 mt-3">
-                In there we discuss about several meetings and we done class activity.
-            </p>
-            <iframe src=${ten} width="75%" height="600px" style={{ border: "none" }}></iframe>
-    </div>
-</section>
-
-`,
-  },{
-    id:5,
-    content: `<section class="container mt-4">
-    <h1 class="fw-bold text-primary text-center">Telephone Etiquette</h1>
-    <p class="text-muted text-center">By Miss Ishara Raviharee Weerasinghe</p><br>
-    
-    <p class="fs-4 text-dark">
-        Today’s professional skills lecture focused on telephone etiquette. Below are some key takeaways:
-    </p>
-    
-    <ul class="list-unstyled text-start d-inline-block fs-5">
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>General Rules for Telephone Use</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Greeting Callers</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Proper Telephone Language</b></li>
-    </ul>
-    
-    <div class="mt-4">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary">General Rules for Telephone Use</h4>
-            <p class="fs-5">
-                - Speak directly into the mouthpiece or headset.<br>
-                - Avoid eating, chewing gum, or covering the phone while speaking.<br>
-                - Use the hold button properly; never leave a caller unattended.<br>
-                - Answer within 2-3 rings whenever possible.
-            </p>
-        </div><br>
-
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Greeting Callers</h4>
-            <p class="fs-5">Proper ways to greet callers based on organization size:</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Large organizations: "Thank you for calling [Department Name]. How may I assist you?"</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Small organizations: "Thank you for calling [Company Name]. How can I help you?"</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Departments: "[Department Name], [Your Name], how may I assist you?"</li>
-            </ul>
-        </div><br>
-
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Placing Callers on Hold & Transferring Calls</h4>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Always ask for permission before placing a caller on hold.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Check back periodically if the hold time is extended.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Explain the reason for a call transfer and get consent.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Ensure the receiving party is available before transferring.</li>
-            </ul>
-        </div><br>
-
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Proper Telephone Language</h4>
-            <p class="fs-5">Maintain professionalism in phone conversations:</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Use polite and positive language.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Avoid abrupt or unprofessional phrases.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Replace negative words with constructive responses.</li>
-            </ul>
-        </div><br>
-
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Ending Conversations</h4>
-           <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Summarize the conversation before ending the call.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Use closing phrases such as "Is there anything else I can help you with today?"</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Thank the caller for their time.</li>
-            </ul>
-        </div><br>
-
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Professionalism in Business Calls</h4>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Always answer calls professionally and promptly.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Use voicemail effectively with clear and concise messages.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Ensure customer satisfaction by providing accurate information.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Maintain a professional tone and avoid slang.</li>
-            </ul>
-        </div><br>
-    </div>
-
-    <p class="fs-5 mt-3">
-        Adhering to proper telephone etiquette ensures effective and professional communication, making interactions smoother and more productive.
-    </p>
-</section>`
-  },{
-    id:6,
-    content: `<section class="container mt-4">
-    <h1 class="fw-bold text-primary text-center">Food Festival</h1>
-    <p class="text-muted text-center">Group Activity of the Module</p><br>
-    <p class="fs-4 text-dark">
-        This was our Group activity for this module, where we had to organize a food festival, open a shop, and sell food items. 
-        Below are the key details:
-    </p>
-    
-    <ul class="list-unstyled text-start d-inline-block fs-5">
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Overview of the Food Festival</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Items Sold at Our Shop</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Skills Applied During the Activity</b></li>
-    </ul>
-
-    <div class="mt-4">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary">Overview of the Food Festival</h4>
-            <p class="fs-5">
-                The event required us to set up and manage a food stall, applying skills learned throughout the module. We sold various food items and gained hands-on experience in business operations.
-            </p>
-
-            <h4 class="fw-bold text-primary mt-4">Items Sold at Our Shop</h4>
-            <p class="fs-5">We offered four main items at our stall:</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Kottu</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Parata</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Pickles(Mango,Abarella,Jambu,Lovi)</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Faluda</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Milk Toffee</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Chicken Bun</li>
-            </ul>
-        </div><br>
-
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Skills Applied During the Activity</h4>
-            <p class="fs-5">
-                Throughout the event, we implemented various skills learned in our lectures, such as:
-            </p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Negotiation skills while selling food</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Effective communication with customers</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Teamwork and coordination</li>
-            </ul>
-        </div><br>
-
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary">Gallery</h4>
-            <p class="fs-5">Here are some moments captured from the event:</p>
-            <div class="row align-items-center mt-3">
-                <div class="col-lg-6">
-                    <img src=${image5} class="img-fluid rounded shadow-lg" alt="Food Festival Image 1">
-                </div><br>
-                <div class="col-lg-6">
-                    <img src=${image7} class="img-fluid rounded shadow-lg" alt="Food Festival Image 2">
-                </div>
-            </div>
-            <p class="fs-5 mt-3">
-                This activity was not only enjoyable but also a valuable learning experience that enhanced our practical skills.
-            </p>
+    title: "Email Etiquette",
+    subtitle: "Mastering Professional Communication",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Email Etiquette</h1>
+          <p class="lead text-muted">By Miss Ishara Raviharee Weerasinghe</p>
+          <p class="text-dark fs-5">Emails are a cornerstone of professional communication. This lecture provided a roadmap for crafting clear, courteous, and effective emails.</p>
         </div>
-    </div>
-</section>
-`
-  },{
-    id:7,
-    content: `<section class="container mt-4">
-    <h1 class="fw-bold text-primary text-center">Job Interview Guide</h1>
-    <p class="text-muted text-center">Essential Tips for Successful Interviews</p><br>
-    
-    <p class="fs-4 text-dark">
-        Mastering interviews requires strong communication, preparation, and confidence. Here are key strategies:
-    </p>
-    
-    <ul class="list-unstyled text-start d-inline-block fs-5">
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Effective Communication in Interviews</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Best Interview Strategies</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Key Communication Techniques</b></li>
-    </ul>
-
-    <div class="mt-4">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary">Effective Communication in Interviews</h4>
-            <p class="fs-5">Verbal and non-verbal skills play a crucial role in making a strong impression.</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Maintain eye contact and smile.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Use confident body language.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Be clear, concise, and professional.</li>
-            </ul>
-        </div><br>
-        
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Best Interview Strategies</h4>
-            <p class="fs-5">Develop a personalized strategy by addressing these key questions:</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> What do I want the interviewer to know about me?</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> What weaknesses should I minimize?</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> What information do I need about the company?</li>
-            </ul>
-        </div><br>
-        
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Key Communication Techniques</h4>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Active Listening:</b> Pay attention, seek clarification, and respond appropriately.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>Non-Verbal Cues:</b> 93% of communication is through tone and body language.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> <b>6 C’s of Effective Communication:</b> Clear, Concise, Correct, Complete, Concrete, Courteous, and Confident.</li>
-            </ul>
-        </div><br>
-        
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Successful vs. Unsuccessful Candidates</h4>
-            <p class="fs-5 text-success fw-bold">Successful candidates:</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Are well-prepared and confident.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Use industry terminology and provide specific examples.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Engage actively and ask insightful questions.</li>
-            </ul>
-            <p class="fs-5 text-danger fw-bold">Unsuccessful candidates:</p>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-x-circle-fill text-danger"></i> Have vague responses and lack company knowledge.</li>
-                <li><i class="bi bi-x-circle-fill text-danger"></i> Show little enthusiasm and poor body language.</li>
-                <li><i class="bi bi-x-circle-fill text-danger"></i> Avoid asking questions.</li>
-            </ul>
-        </div><br>
-        
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Common Interview Questions</h4>
-            <p class="fs-5">Example Question: <b>Tell us about a challenge you’ve faced and how you handled it.</b></p>
-            <p class="fs-5">Sample Answer: "In my last job, we had a tight deadline. I took the lead, delegated tasks, and successfully delivered the project on time."</p>
-        </div><br>
-        
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary mt-4">Final Tips</h4>
-            <ul class="list-unstyled text-start d-inline-block fs-5">
-                <li><i class="bi bi-check-circle-fill text-success"></i> Research the company beforehand.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Dress appropriately for the interview.</li>
-                <li><i class="bi bi-check-circle-fill text-success"></i> Practice with mock interviews.</li>
-            </ul>
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">Understanding Email Etiquette</h3>
+          <p class="fs-5 text-dark">
+            Etiquette refers to the norms governing polite behavior. In emails, it ensures messages are professional and respectful. Key rules include:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Using a clear, specific subject line to set expectations.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Addressing recipients by name for a personal touch.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Avoiding all caps, which can seem aggressive.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Proofreading for grammar and spelling to maintain credibility.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            For example, a subject line like “Meeting Request – Project Update” is far more effective than a vague “Hi.” Proper etiquette builds trust and enhances communication.
+          </p>
         </div>
-    </div>
-</section>`
-  },{
-    id:8,
-    content: `<section class="container mt-4">
-    <h1 class="fw-bold text-primary text-center">Emotional Intelligence</h1>
-    <p class="text-muted text-center">Understanding and Applying Emotional Intelligence in Professional and Personal Growth</p><br>
-    <p class="fs-4 text-dark">
-        Today’s professional skills lecture focused on Emotional Intelligence (EI). The session covered the definition, importance, and application of EI in various aspects of life.
-    </p>
-    
-    <ul class="list-unstyled text-start d-inline-block fs-5">
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>What is Emotional Intelligence (EI)?</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>IQ vs. EQ</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>EI Domains and Their Importance</b></li>
-        <li><i class="bi bi-check-circle-fill text-success"></i> <b>Emotional Intelligence and Leadership</b></li>
-    </ul>
-
-    <div class="mt-4">
-        <div class="bg-white p-4 rounded shadow-lg">
-            <h4 class="fw-bold text-primary">What is Emotional Intelligence (EI)?</h4>
-            <p class="fs-5">
-                Defined by Salovey and Mayer (1990) as the ability to monitor and manage one's own and others' emotions. Key skills include perceiving emotions, understanding emotional meanings, using emotions in thinking, and managing emotions effectively.
-            </p>
-
-            <h4 class="fw-bold text-primary mt-4">IQ vs. EQ</h4>
-            <p class="fs-5">
-                IQ measures cognitive abilities, whereas EQ focuses on emotional awareness and management. While IQ plays a role in academic and technical skills, EQ is essential for stress management, relationship-building, and effective leadership.
-            </p>
-        </div>
-    </div><br>
-
-    <div class="bg-white p-4 rounded shadow-lg">
-        <h4 class="fw-bold text-primary">The Five Domains of Emotional Intelligence</h4>
-        <p class="fs-5">Daniel Goleman’s EI framework consists of five core domains that contribute to emotional and social effectiveness:</p>
-
-        <h5 class="fw-bold text-primary">1. Self-Awareness</h5>
-        <p class="fs-5">Understanding one's emotions and their impact on thoughts and behaviors. Self-aware individuals recognize their emotional strengths and weaknesses and maintain confidence in their abilities.</p>
-
-        <h5 class="fw-bold text-primary">2. Self-Regulation</h5>
-        <p class="fs-5">Managing emotions in a constructive way to adapt to different situations. Strategies include practicing mindfulness, reframing negative thoughts, and maintaining control in stressful scenarios.</p>
-
-        <h5 class="fw-bold text-primary">3. Motivation</h5>
-        <p class="fs-5">Pursuing goals with passion and resilience. Emotionally intelligent individuals are intrinsically motivated, optimistic, and able to overcome setbacks without losing focus.</p>
-
-        <h5 class="fw-bold text-primary">4. Empathy</h5>
-        <p class="fs-5">Recognizing and understanding the emotions of others. This skill helps build strong relationships, improve communication, and foster a supportive environment.</p>
-
-        <h5 class="fw-bold text-primary">5. Social Skills</h5>
-        <p class="fs-5">Building strong relationships and navigating social complexities effectively. Key skills include communication, influence, conflict resolution, and teamwork.</p>
-    </div><br>
-
-    <div class="bg-white p-4 rounded shadow-lg">
-        <h4 class="fw-bold text-primary">Emotional Intelligence and Leadership</h4>
-        <p class="fs-5">Effective leaders leverage EI to inspire and manage teams. Goleman’s leadership competencies emphasize self-awareness, self-regulation, motivation, empathy, and social skills as essential traits for successful leadership.</p>
-    </div><br>
-
-    <div class="bg-white p-4 rounded shadow-lg">
-        <h4 class="fw-bold text-primary">Practical Applications</h4>
-        <p class="fs-5">Emotional Intelligence plays a critical role in reducing stress, resolving conflicts, enhancing job satisfaction, and improving decision-making. Mastering EI contributes to stronger relationships, career success, and personal fulfillment.</p>
-    </div><br>
-
-    <div class="bg-white p-4 rounded shadow-lg">
-        <h4 class="fw-bold text-primary">EI Activity</h4>
-        <p class="fs-5">We have done some class activities in the lecture time</p>
-        <div class="row">
-            <div class="col-lg-5">
-                <img src=${image8} class="img-fluid rounded shadow" alt="Self-awareness exercise">
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">Advantages and Disadvantages of Emails</h3>
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <img src=${seven} class="img-fluid rounded shadow-lg" alt="Email Example" />
+              <p class="fs-5 text-dark mt-4">
+                <b>Advantages:</b> Emails are fast, cost-effective, and provide a written record. They support attachments, making them versatile for sharing documents or images.
+              </p>
             </div>
-            <div class="col-lg-5">
-                <img src=${image9} class="img-fluid rounded shadow" alt="Empathy mapping exercise">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+              <img src=${eight} class="img-fluid rounded shadow-lg" alt="Email Risks" />
+              <p class="fs-5 text-dark mt-4">
+                <b>Disadvantages:</b> Emails lack tone and body language, risking miscommunication. They can also lead to information overload or security threats like phishing.
+              </p>
             </div>
+          </div>
+          <p class="fs-5 text-dark mt-4">
+            In a class activity, we reviewed sample emails to identify etiquette errors, reinforcing the importance of clarity and professionalism.
+          </p>
         </div>
-    </div>
-</section>
-`
-  }
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Meetings and Email Integration</h3>
+          <p class="fs-5 text-dark">
+            Emails often facilitate meetings by sharing agendas or follow-ups. We explored this through a class activity, reviewing a meeting-related document:
+          </p>
+          <iframe src=${ten} width="100%" height="600px" style="border: none;" data-aos="fade-up" data-aos-delay="600"></iframe>
+          <p class="fs-5 text-dark mt-4">
+            This lecture underscored the power of well-crafted emails to streamline communication and project professionalism in academic and business settings.
+          </p>
+        </div>
+      </section>
+    `,
+  },
+  {
+    id: 5,
+    title: "Telephone Etiquette",
+    subtitle: "Professional Communication Over the Phone",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Telephone Etiquette</h1>
+          <p class="lead text-muted">By Miss Ishara Raviharee Weerasinghe</p>
+          <p class="text-dark fs-5">Effective phone communication is a vital professional skill. This lecture provided guidelines for clear, courteous, and professional telephone interactions.</p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">General Rules for Telephone Use</h3>
+          <p class="fs-5 text-dark">
+            Proper telephone etiquette ensures smooth and professional conversations. Key guidelines include:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Answer calls within 2-3 rings to show responsiveness.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Speak clearly into the mouthpiece, avoiding distractions like eating.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Use the hold button appropriately, checking back if delays occur.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            For example, answering promptly with a greeting like “Hello, this is [Your Name]” sets a professional tone and builds rapport with the caller.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">Greeting and Managing Calls</h3>
+          <p class="fs-5 text-dark">
+            How you greet and manage calls reflects your professionalism. We learned tailored greetings based on context:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Large organizations: “Thank you for calling [Department]. How may I assist you?”</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Small businesses: “Thank you for calling [Company]. How can I help?”</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Departments: “[Department], [Your Name], how may I assist?”</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            When transferring calls, always ask permission and ensure the receiving party is available. This prevents frustration and maintains a positive caller experience.
+          </p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Professional Language and Closure</h3>
+          <p class="fs-5 text-dark">
+            Using polite, positive language and ending calls gracefully are key. Tips include:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Replace negative phrases (e.g., “I can’t”) with constructive responses (e.g., “Let me find a solution”).</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Summarize the conversation before closing.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> End with phrases like “Is there anything else I can assist with?” and thank the caller.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            In a role-play activity, we practiced answering and managing calls, reinforcing the importance of tone, clarity, and courtesy. These skills ensure productive and professional phone interactions.
+          </p>
+        </div>
+      </section>
+    `,
+  },
+  {
+    id: 6,
+    title: "Food Festival",
+    subtitle: "A Hands-On Lesson in Teamwork and Business Skills",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Food Festival</h1>
+          <p class="lead text-muted">Group Activity of the Module</p>
+          <p class="text-dark fs-5">This group activity brought our professional skills to life as we organized a food festival, managed a stall, and sold diverse food items. It was a vibrant blend of fun and learning.</p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">Overview of the Food Festival</h3>
+          <p class="fs-5 text-dark">
+            The food festival was a practical exercise in applying skills like teamwork, negotiation, and customer service. Each group set up a stall, planned a menu, and managed sales, simulating real-world business operations. This hands-on experience tested our ability to collaborate under pressure and deliver results.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">Our Stall: Menu and Operations</h3>
+          <p class="fs-5 text-dark">
+            Our stall offered a variety of delicious items, carefully chosen to appeal to diverse tastes:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Kottu: A popular stir-fried dish with chopped roti and spices.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Parata: Flaky, layered flatbread served with curry.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Pickles: Mango, Amberella, Jambu, and Lovi for tangy flavor.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Faluda: A refreshing rose-flavored dessert drink.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Milk Toffee: Sweet, chewy confections.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Chicken Bun: Savory buns with spiced chicken filling.</li>
+          </ul>
+          <div class="row mt-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <img src=${image5} class="img-fluid rounded shadow-lg" alt="Food Festival Stall" />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+              <img src=${image7} class="img-fluid rounded shadow-lg" alt="Food Festival Activity" />
+            </div>
+          </div>
+          <p class="fs-5 text-dark mt-4">
+            Managing the stall required dividing tasks—some prepared food, others handled sales, and a few focused on customer engagement. This taught us the value of clear roles and coordination.
+          </p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Skills in Action</h3>
+          <p class="fs-5 text-dark">
+            The festival was a real-world application of our lecture topics:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Negotiation:</b> Convincing customers to try our items and managing pricing discussions.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Communication:</b> Engaging customers with enthusiasm and clarity.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Teamwork:</b> Collaborating to ensure smooth operations, from setup to cleanup.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            This activity was both enjoyable and educational, reinforcing how professional skills translate into practical success. It left us confident in our ability to work as a team and engage with customers effectively.
+          </p>
+        </div>
+      </section>
+    `,
+  },
+  {
+    id: 7,
+    title: "Job Interview Guide",
+    subtitle: "Strategies for Confidence and Success",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Job Interview Guide</h1>
+          <p class="lead text-muted">Essential Tips for Successful Interviews</p>
+          <p class="text-dark fs-5">Interviews are your chance to shine. This lecture provided a comprehensive guide to preparing, communicating, and succeeding in job interviews.</p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">Effective Communication in Interviews</h3>
+          <p class="fs-5 text-dark">
+            Communication is the heart of a successful interview. Both verbal and non-verbal skills matter:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Maintain eye contact and smile to build rapport.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Use confident body language, like sitting upright and gesturing naturally.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Speak clearly and concisely, avoiding filler words like “um” or “like.”</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            For instance, a firm handshake and steady eye contact can convey confidence, while slouching might suggest disinterest. These cues significantly influence the interviewer’s perception.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">Strategic Interview Preparation</h3>
+          <p class="fs-5 text-dark">
+            Preparation is key to standing out. We learned to address three critical questions:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> What do I want the interviewer to know about my strengths?</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> How can I minimize the impact of my weaknesses?</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> What do I need to learn about the company to show interest?</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            Researching the company’s mission, values, and recent achievements allows you to tailor your responses. For example, mentioning a recent company milestone during the interview demonstrates genuine interest.
+          </p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Common Questions and Winning Answers</h3>
+          <p class="fs-5 text-dark">
+            We practiced responding to common questions, such as: <b>“Tell us about a challenge you faced and how you handled it.”</b>
+          </p>
+          <p class="fs-5 text-dark">
+            <b>Sample Answer:</b> “In my previous role, we faced a tight project deadline. I took the lead, delegated tasks based on team strengths, and communicated daily updates. We delivered the project on time, exceeding client expectations.”
+          </p>
+          <p class="fs-5 text-dark mt-4">
+            Using the STAR method (Situation, Task, Action, Result) ensures responses are structured and impactful. This approach highlights your problem-solving skills and achievements.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="600">
+          <h3 class="fw-bold text-primary mb-4">Final Tips for Success</h3>
+          <p class="fs-5 text-dark">
+            To excel in interviews, consider these tips:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Dress appropriately, aligning with the company’s culture (e.g., business formal for corporate roles).</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Practice with mock interviews to build confidence.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Ask insightful questions, like “What does success look like in this role?”</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            This lecture equipped us with strategies to approach interviews with confidence, ensuring we leave a lasting, positive impression.
+          </p>
+        </div>
+      </section>
+    `,
+  },
+  {
+    id: 8,
+    title: "Emotional Intelligence",
+    subtitle: "The Key to Personal and Professional Growth",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Emotional Intelligence</h1>
+          <p class="lead text-muted">Understanding and Applying Emotional Intelligence</p>
+          <p class="text-dark fs-5">Emotional Intelligence (EI) is the ability to understand and manage emotions—your own and others’. This lecture explored EI’s role in fostering relationships, leadership, and personal fulfillment.</p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">What is Emotional Intelligence?</h3>
+          <p class="fs-5 text-dark">
+            Defined by Salovey and Mayer (1990), EI involves perceiving, understanding, using, and managing emotions effectively. Unlike IQ, which measures cognitive ability, EI (or EQ) focuses on emotional awareness. For example, a manager with high EI can motivate a struggling team by empathizing and offering constructive feedback.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">The Five Domains of EI</h3>
+          <p class="fs-5 text-dark">
+            Daniel Goleman’s EI framework outlines five domains critical for emotional and social success:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Self-Awareness:</b> Recognizing your emotions and their impact. E.g., understanding when stress affects your decisions.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Self-Regulation:</b> Controlling emotions constructively. E.g., staying calm during a heated discussion.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Motivation:</b> Pursuing goals with resilience and optimism. E.g., persisting after a project setback.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Empathy:</b> Understanding others’ emotions to build trust. E.g., supporting a struggling colleague.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <b>Social Skills:</b> Navigating relationships and conflicts effectively. E.g., mediating team disputes.</li>
+          </ul>
+          <div class="row mt-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <img src=${image8} class="img-fluid rounded shadow-lg" alt="Self-Awareness Exercise" />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+              <img src=${image9} class="img-fluid rounded shadow-lg" alt="Empathy Mapping" />
+            </div>
+          </div>
+          <p class="fs-5 text-dark mt-4">
+            Through class activities, like role-playing empathy scenarios, we practiced applying these domains, gaining insights into our emotional strengths and areas for growth.
+          </p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">EI in Leadership and Daily Life</h3>
+          <p class="fs-5 text-dark">
+            EI is a hallmark of effective leadership. Leaders with high EI inspire teams, manage conflicts, and foster collaboration. Beyond the workplace, EI reduces stress, enhances decision-making, and strengthens relationships. For instance, empathizing with a friend’s struggles can deepen your connection.
+          </p>
+          <p class="fs-5 text-dark mt-4">
+            This lecture highlighted EI’s transformative power, equipping us to navigate complex emotions and build meaningful connections in all areas of life.
+          </p>
+        </div>
+      </section>
+    `,
+  },
+  {
+    id: 9,
+    title: "Dining Etiquette",
+    subtitle: "Mastering the Art of Professional Dining",
+    content: `
+      <section class="container mt-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h1 class="display-4 fw-bold text-primary">Dining Etiquette</h1>
+          <p class="lead text-muted">Polishing Your Professional Presence</p>
+          <p class="text-dark fs-5">Dining etiquette is more than table manners—it’s about projecting professionalism and confidence in formal settings. This lecture provided a detailed guide to navigating dining scenarios with grace.</p>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="fw-bold text-primary mb-4">The Formal Dining Setup</h3>
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+              <img src=${image10} class="img-fluid rounded shadow-lg" alt="Dining Setup" />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+              <p class="fs-5 text-dark">
+                A formal dining table is meticulously arranged, with utensils placed for specific courses. The rule is simple: start with the outermost utensil and work inward. For example, the salad fork is typically outside the dinner fork, used first if salad is the initial course.
+              </p>
+            </div>
+          </div>
+          <p class="fs-5 text-dark mt-4">
+            We also learned napkin etiquette: unfold the napkin into a triangle or rectangle and place it on your lap. Avoid crumpling it or using it as a bib. These small details signal refinement and attention to protocol.
+          </p>
+        </div>
+        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
+          <h3 class="fw-bold text-primary mb-4">Dining Manners and Techniques</h3>
+          <p class="fs-5 text-dark">
+            Proper manners enhance the dining experience. Key tips include:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Take small bites and chew with your mouth closed.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Break bread into small pieces before eating, using your bread plate.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Pass salt and pepper together, even if only one is requested.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            We also explored utensil techniques, like the <b>Pencil Method</b> (holding utensils like a pencil) and <b>Scalpel Method</b> (tines down, pressing with the index finger). These methods ensure precision and elegance while eating.
+          </p>
+          <div class="row mt-4">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+              <img src=${image11} class="img-fluid rounded shadow-lg" alt="Dining Style 1" />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+              <img src=${image12} class="img-fluid rounded shadow-lg" alt="Dining Style 2" />
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="fw-bold text-primary mb-4">Business Etiquette and First Impressions</h3>
+          <p class="fs-5 text-dark">
+            Dining etiquette is part of broader business etiquette, which includes:
+          </p>
+          <ul class="list-unstyled fs-5">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Workplace etiquette: Respecting colleagues and hierarchies.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Communication etiquette: Using clear, professional language.</li>
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Meeting etiquette: Arriving prepared and on time.</li>
+          </ul>
+          <p class="fs-5 text-dark mt-4">
+            First impressions are critical. A genuine smile, warm greeting, proper eye contact, and neat grooming create a positive impact. For example, arriving at a business dinner well-dressed and engaging actively sets a professional tone.
+          </p>
+          <p class="fs-5 text-dark mt-4">
+            This lecture equipped us with the skills to navigate formal dining with confidence, enhancing our professional presence in business and social settings.
+          </p>
+        </div>
+      </section>
+    `,
+  },
 ];
 
 const BlogDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const blogPost = blogPosts.find(post => post.id.toString() === id);
+  const blogPost = blogPosts.find((post) => post.id.toString() === id);
+
+  useEffect(() => {
+    initializeAOS();
+    AOS.refresh();
+  }, []);
 
   if (!blogPost) {
     return (
-      <div className="container text-center mt-5">
-        <h2 className="text-danger">Post Not Found!</h2>
-        <p className="text-muted">The blog post you are looking for does not exist.</p>
-        <Link to="/assignment" className="btn btn-primary mt-3">Back to Assignments</Link>
+      <div className="container text-center mt-5" data-aos="fade-in">
+        <h2 className="text-danger display-5 fw-bold">Post Not Found!</h2>
+        <p className="text-muted fs-4">The blog post you are looking for does not exist.</p>
+        <Link to="/assignment" className="btn btn-primary btn-lg shadow-sm animate-button">
+          Back to Assignments
+        </Link>
       </div>
     );
   }
 
   return (
-    <div className="container blog-details-container">
-      <div className="row">
-        <div className="col-lg-12">
-          <div className="blog-post p-4 rounded shadow-lg">
-            <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
-            <div className="text-center mt-4">
-              <Link to="/assignment" className="btn btn-primary btn-lg shadow-sm">Back to Assignments</Link>
+    <div className="blog-details-container py-5">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-lg-10">
+            <div className="blog-post bg-white p-5 rounded shadow-lg" data-aos="fade-up">
+              <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
+              <div className="text-center mt-5">
+                <Link
+                  to="/assignment"
+                  className="btn btn-primary btn-lg shadow-sm animate-button"
+                >
+                  Back to Assignments
+                </Link>
+              </div>
             </div>
           </div>
         </div>

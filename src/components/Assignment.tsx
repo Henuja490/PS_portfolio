@@ -13,6 +13,7 @@ import Week5 from './assets/10.webp'; // New blog image
 import Week6 from './assets/11.webp'; 
 import Week7 from './assets/9.webp'; 
 import Week8 from './assets/week8.jpg'; 
+import Week9 from './assets/holiday_meal_142589503.webp'; 
 type BlogPost = {
   id: number;
   title: string;
@@ -34,7 +35,7 @@ const blogPosts: BlogPost[] = [
     id: 6,
     title: 'Food Festival',
     author: 'Henuja Katuwapitiya',
-    date: 'Week 6',
+    date: 'Week 2',
     image: Week6, // New blog image
     authorImage: authorImage,
   },
@@ -42,7 +43,7 @@ const blogPosts: BlogPost[] = [
     id: 2,
     title: 'CV Writing and Writing Cover Letters',
     author: 'Henuja Katuwapitiya',
-    date: 'Week 2',
+    date: 'Week 3',
     image: Week2,
     authorImage: authorImage, 
   },
@@ -50,7 +51,7 @@ const blogPosts: BlogPost[] = [
     id: 3,
     title: 'Portfolio Management',
     author: 'Henuja Katuwapitiya',
-    date: 'Week 3',
+    date: 'Week 4',
     image: Week3,
     authorImage: authorImage,
   }
@@ -58,14 +59,14 @@ const blogPosts: BlogPost[] = [
       id: 7,
       title: 'Interview Skills',
       author: 'Henuja Katuwapitiya',
-      date: 'Week 7',
+      date: 'Week 5',
       image: Week7, // New blog image
       authorImage: authorImage,
     },{
       id: 4,
       title: 'Email Etiquettes and Meetings',
       author: 'Henuja Katuwapitiya',
-      date: 'Week 4',
+      date: 'Week 6',
       image: Week4,
       authorImage: authorImage,
     }
@@ -75,7 +76,7 @@ const blogPosts: BlogPost[] = [
     id: 5,
     title: 'Telephone Etiquettes',
     author: 'Henuja Katuwapitiya',
-    date: 'Week 5',
+    date: 'Week 7',
     image: Week5, // New blog image
     authorImage: authorImage,
   },{
@@ -84,6 +85,13 @@ const blogPosts: BlogPost[] = [
       author: 'Henuja Katuwapitiya',
       date: 'Week 8',
       image: Week8, // New blog image
+      authorImage: authorImage,
+    },{
+      id: 9,
+      title: 'Dinning Etiquettes',
+      author: 'Henuja Katuwapitiya',
+      date: 'Week 9',
+      image: Week9, // New blog image
       authorImage: authorImage,
     }
   

@@ -88,7 +88,7 @@ const Home: React.FC = () => {
               <div className="card-body">
                 <h5 className="card-title text-primary">Week 1: Introduction to Professional Skills</h5>
                 <p className="card-text text-muted">Learn about the importance of professional skills in the workplace.</p>
-                <a href="/assignment/1" className="btn btn-primary btn-sm">Read More</a>
+                <a href="PS_portfolio/assignment/1" className="btn btn-primary btn-sm">Read More</a>
               </div>
             </div>
           </div>
@@ -98,13 +98,13 @@ const Home: React.FC = () => {
               <div className="card-body">
                 <h5 className="card-title text-primary">Week 2: CV Writing and Cover Letters</h5>
                 <p className="card-text text-muted">Discover how to create a professional CV and cover letter.</p>
-                <a href="/assignment/2" className="btn btn-primary btn-sm">Read More</a>
+                <a href="PS_portfolio/assignment/2" className="btn btn-primary btn-sm">Read More</a>
               </div>
             </div>
           </div>
         </div>
         <div className="text-center mt-4">
-          <a href="/assignment" className="btn btn-outline-primary btn-lg shadow-sm">View All Assignments</a>
+          <a href="PS_portfolio/assignment" className="btn btn-outline-primary btn-lg shadow-sm">View All Assignments</a>
         </div>
       </div>
 
@@ -133,7 +133,7 @@ const Home: React.FC = () => {
       <div className="cta-section mt-5 text-center">
         <h3 className="text-primary">Ready to Collaborate?</h3>
         <p className="text-muted">Let's work together to create something amazing.</p>
-        <a href="/contact" className="btn btn-primary btn-lg shadow-sm">Contact Me</a>
+        <a href="PS_portfolio/about" className="btn btn-primary btn-lg shadow-sm">Contact Me</a>
       </div>
     </div>
   );
