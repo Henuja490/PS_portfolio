@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Blogdetails.css"; // Custom CSS for styling
@@ -46,55 +46,85 @@ const blogPosts: BlogPost[] = [
     title: "Mastering Professional Skills",
     subtitle: "Building the Foundation for Career Success",
     content: `
-      <section class="container mt-5">
-        <div class="text-center mb-5" data-aos="fade-up">
-          <h1 class="display-4 fw-bold text-primary">Mastering Professional Skills</h1>
-          <p class="lead text-muted">By Miss Ishara Raviharee Weerasinghe</p>
-          <p class="text-dark fs-5">In today’s dynamic workplace, professional skills—often called soft skills—are the cornerstone of career success. This lecture offered a deep dive into their importance, providing actionable insights to enhance personal and professional growth.</p>
-        </div>
-        <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="fw-bold text-primary mb-4">What Are Professional Skills?</h3>
-          <p class="fs-5 text-dark">
-            Professional skills encompass interpersonal and emotional competencies that complement technical expertise. Unlike hard skills, which are job-specific, soft skills like communication, teamwork, and adaptability are universally applicable. This session explored:
-          </p>
-          <ul class="list-unstyled fs-5">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> The definition and scope of professional skills</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Their critical role in fostering career advancement</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Practical strategies for developing and mastering these skills</li>
-          </ul>
-          <p class="fs-5 text-dark mt-4">
-            For example, effective communication ensures clarity in team projects, while adaptability allows professionals to thrive in fast-paced environments. These skills create a positive workplace culture and open doors to leadership opportunities.
-          </p>
-        </div>
-        <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="200">
-          <h3 class="fw-bold text-primary mb-4">The Johari Window:izion</h3>
-          <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
-              <img src=${first} class="img-fluid rounded shadow-lg" alt="Johari Window" />
-            </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
-              <p class="fs-5 text-dark">
-                The Johari Window, developed by Joseph Luft and Harrington Ingham, is a transformative tool for self-awareness. It categorizes personal traits into four quadrants: open, hidden, blind, and unknown. By understanding how we perceive ourselves versus how others see us, we can improve communication, build trust, and foster personal growth. In class, we analyzed real-life scenarios to apply this model, gaining insights into our strengths and areas for improvement.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="500">
-          <h3 class="fw-bold text-primary mb-4">Practical Tips for Skill Development</h3>
-          <p class="fs-5 text-dark">
-            Developing professional skills requires intentional effort and practice. Here are actionable tips shared during the lecture:
-          </p>
-          <ul class="list-unstyled fs-5">
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Step out of your comfort zone by taking on new challenges, such as leading a project.</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Seek constructive feedback from peers and mentors to identify growth areas.</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Commit to continuous learning through workshops, courses, or reading.</li>
-            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Collaborate with diverse teams to enhance teamwork and problem-solving skills.</li>
-          </ul>
-          <p class="fs-5 text-dark mt-4">
-            This lecture was a game-changer, equipping us with tools to navigate professional challenges and build meaningful workplace relationships.
-          </p>
-        </div>
-      </section>
+      <section class="container mt-5"> 
+  <div class="text-center mb-5" data-aos="fade-up">
+    <h1 class="display-4 fw-bold text-primary">Introduction to Professional Skills</h1>
+    <p class="lead text-muted">By Miss Ishara Raviharee Weerasinghe</p>
+    <p class="text-dark fs-5">
+      In this lecture, we explored the concept of professional skills—vital competencies that play a crucial role in shaping our careers. The session focused on enhancing our understanding of these skills and how to effectively apply them in future professional settings.
+    </p>
+  </div>
+
+  <div class="bg-white p-5 rounded shadow-lg" data-aos="fade-up" data-aos-delay="100">
+    <h3 class="fw-bold text-primary mb-4">What Are Professional and Employability Skills?</h3>
+    <p class="fs-5 text-dark">
+      Professional skills, also known as soft or employability skills, are the interpersonal and non-technical abilities essential for success in any job role. These skills are transferable across various industries and include:
+    </p>
+    <ul class="list-unstyled fs-5">
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Understanding what professional skills are</li>
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Why these skills are vital for career success</li>
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Strategies to develop and apply these skills effectively</li>
+    </ul>
+    <p class="fs-5 text-dark mt-4">
+      Examples include communication, teamwork, problem-solving, adaptability, time management, and leadership. These are crucial in navigating today’s work environments and building strong career foundations.
+    </p>
+  </div>
+
+  <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="fw-bold text-primary mb-4">Key Learnings from the Lecture</h3>
+    <p class="fs-5 text-dark">
+      During the session, we discussed various categories of skills such as technical, soft, and transferable skills. For instance:
+    </p>
+    <ul class="list-unstyled fs-5">
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Technical Skills:</strong> Job-specific abilities based on specialized knowledge.</li>
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Soft Skills:</strong> Interpersonal skills that enhance overall job performance.</li>
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Transferable Skills:</strong> Skills like problem-solving and adaptability applicable in multiple roles.</li>
+    </ul>
+    <p class="fs-5 text-dark">
+      Additionally, we explored the role of character, values, attitudes, and beliefs in shaping our professional behavior and mindset.
+    </p>
+  </div>
+
+  <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="300">
+    <h3 class="fw-bold text-primary mb-4">Activity-Based Learning</h3>
+    
+    <p class="fs-5 text-dark">
+      We also participated in the Johari Window exercise, which emphasized self-awareness and feedback in interpersonal communication.
+    </p>
+    <div class="fs-5 text-center" data-aos="fade" data-aos-delay="500">
+        <img src=${first} class="img-fluid rounded shadow-lg w-50 h-50" alt="Johari Window" />
+      </div>
+  </div>
+
+  <div class="bg-light p-5 rounded shadow-lg mt-5" data-aos="zoom-in" data-aos-delay="400">
+    <h3 class="fw-bold text-primary mb-4">The Johari Window</h3>
+    <div class="row align-items-center">
+      
+      <div class="fs-5" data-aos="fade-left" data-aos-delay="600">
+        <p class="fs-5 text-dark">
+          Developed by Joseph Luft and Harrington Ingham, the Johari Window is a psychological tool used to enhance self-awareness and improve group dynamics. It divides personal traits into four quadrants: open, blind, hidden, and unknown. This model helped us reflect on how we perceive ourselves and how others perceive us, promoting more transparent and effective communication.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white p-5 rounded shadow-lg mt-5" data-aos="fade-up" data-aos-delay="700">
+    <h3 class="fw-bold text-primary mb-4">Tips for Enhancing Professional Skills</h3>
+    <p class="fs-5 text-dark">
+      The lecture concluded with practical advice for developing professional skills:
+    </p>
+    <ul class="list-unstyled fs-5">
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Embrace challenges to grow beyond your comfort zone.</li>
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Welcome constructive feedback for continuous improvement.</li>
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Practice skills regularly and apply them in real-world scenarios.</li>
+      <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Stay committed to lifelong learning and development.</li>
+    </ul>
+    <p class="fs-5 text-dark mt-4">
+      This lecture provided us not only with theoretical knowledge but also practical tools and exercises to develop into confident and capable professionals.
+    </p>
+  </div>
+</section>
+
     `,
   },
   {
