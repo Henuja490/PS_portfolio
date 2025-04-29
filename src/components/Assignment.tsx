@@ -14,6 +14,7 @@ import Week6 from './assets/11.webp';
 import Week7 from './assets/9.webp'; 
 import Week8 from './assets/week8.jpg'; 
 import Week9 from './assets/holiday_meal_142589503.webp'; 
+import Week10 from './assets/1709901302504 (1).png'; 
 type BlogPost = {
   id: number;
   title: string;
@@ -92,6 +93,13 @@ const blogPosts: BlogPost[] = [
       author: 'Henuja Katuwapitiya',
       date: 'Week 9',
       image: Week9, // New blog image
+      authorImage: authorImage,
+    },{
+      id: 10,
+      title: 'Cultivating Effective Research Skills',
+      author: 'Henuja Katuwapitiya',
+      date: 'Week 10',
+      image: Week10, // New blog image
       authorImage: authorImage,
     }
   

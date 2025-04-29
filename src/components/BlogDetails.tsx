@@ -709,7 +709,92 @@ const blogPosts: BlogPost[] = [
         </div>
       </section>
     `,
-  },
+  },{
+    id: 10,
+    content: `<section class="container mt-4" data-aos="fade-up">
+        <h1 class="fw-bold text-primary text-center" data-aos="fade-up" data-aos-delay="100">Cultivating Effective Research Skills</h1>
+        <p class="text-muted text-center" data-aos="fade-up" data-aos-delay="200">By Miss Ishadi  </p><br>
+        <p class="fs-4 text-dark" data-aos="fade-up" data-aos-delay="300">
+          Research is like a treasure hunt to find new information or solve problems. This chapter will guide you through the steps to become a great researcher!
+        </p>
+        <ul class="list-unstyled text-start d-inline-block fs-5" data-aos="fade-up" data-aos-delay="400">
+          <li><i class="bi bi-check-circle-fill text-success"></i> <b>What is research?</b></li>
+          <li><i class="bi bi-check-circle-fill text-success"></i> <b>Parts of a research paper</b></li>
+          <li><i class="bi bi-check-circle-fill text-success"></i> <b>How to write a literature review, methodology, and more</b></li>
+        </ul>
+
+        <div class="mt-4">
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="500">
+            <h4 class="fw-bold text-primary">What is Research?</h4>
+            <p class="fs-5">
+              Research is a careful process of exploring a question or problem to find answers. It’s like solving a puzzle to learn something new or confirm what we know.
+            </p>
+            <h4 class="fw-bold text-primary mt-4">Parts of a Research Paper</h4>
+            <p class="fs-5">A research paper has these key parts:</p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Title:</b> A short, clear name for your research.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Author Info:</b> Your name and school or contact details.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Abstract:</b> A quick summary (150–250 words) of your research question, methods, results, and conclusions.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Introduction:</b> Explains the background, the problem you’re studying, why it matters, and your goals.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Literature Review:</b> Summarizes what others have already studied about your topic.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Methodology:</b> Describes how you did your research.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Results:</b> Shows what you found, often with charts or tables.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Conclusion:</b> Wraps up your findings and suggests what to study next.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Keywords:</b> Words that help others find your paper online.</li>
+            </ul>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="600">
+            <h4 class="fw-bold text-primary">Conducting a Literature Review</h4>
+            <p class="fs-5">
+              A literature review is like a report on what other researchers have said about your topic. It helps you find gaps in knowledge and shows how your research fits in.
+            </p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> Read studies related to your topic.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Summarize their main points.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Point out what’s missing that your research will address.</li>
+            </ul>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="700">
+            <h4 class="fw-bold text-primary">Methodology</h4>
+            <p class="fs-5">This section explains how you did your research, including:</p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Research Type:</b> Is it based on numbers (quantitative), stories (qualitative), or both?</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Participants:</b> Who was involved and how you chose them.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Data Collection:</b> How you gathered info (e.g., surveys, interviews, experiments).</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Data Analysis:</b> How you made sense of the data (e.g., using math or finding patterns).</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Ethics:</b> How you kept things fair and private for participants.</li>
+            </ul>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="800">
+            <h4 class="fw-bold text-primary">Results and Discussion</h4>
+            <p class="fs-5">This part shares what you discovered and what it means:</p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> Show your findings with graphs, tables, or descriptions.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> Highlight the most important results and how they answer your question.</li>
+            </ul>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="900">
+            <h4 class="fw-bold text-primary">Writing a Conclusion</h4>
+            <p class="fs-5">
+              The conclusion sums up what you found, why it matters, and what could be studied next. It’s your chance to leave a lasting impression!
+            </p>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="1000">
+            <h4 class="fw-bold text-primary">Crafting a Great Abstract</h4>
+            <p class="fs-5">An abstract is a short summary of your whole paper. It should be:</p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Complete:</b> Include the problem, methods, results, and conclusion.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Short:</b> Keep it brief, around 150–250 words.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Clear:</b> Use simple words anyone can understand.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Smooth:</b> Make sure ideas flow well from one to the next.</li>
+            </ul>
+            <p class="fs-5 mt-3">
+              Mastering these research skills will help you create strong projects for school and beyond!
+            </p>
+          </div>
+        </div>
+      </section>`
+  }
 ];
 
 const BlogDetails: React.FC = () => {
