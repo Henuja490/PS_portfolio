@@ -24,6 +24,17 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+<<<<<<< Updated upstream
+=======
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+>>>>>>> Stashed changes
   "eslintConfig": {
     "extends": [
       "react-app",
