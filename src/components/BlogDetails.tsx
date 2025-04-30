@@ -22,6 +22,7 @@ import image8 from './assets/work.jpg';
 import image9 from './assets/work2.jpg';
 import din2 from './assets/din2.jpg';
 import din3 from './assets/din3.jpg';
+import negotiationImage from './assets/nego.jpg';
 
 type BlogPost = {
   id: number;
@@ -792,6 +793,88 @@ const blogPosts: BlogPost[] = [
               Mastering these research skills will help you create strong projects for school and beyond!
             </p>
           </div>
+        </div>
+      </section>`
+  },{
+    id: 11,
+    content: `<section class="container mt-4" data-aos="fade-up">
+        <h1 class="fw-bold text-primary text-center" data-aos="fade-up" data-aos-delay="100">Effective Negotiation Strategies</h1>
+        <p class="text-muted text-center" data-aos="fade-up" data-aos-delay="200">By Mr. Shenal</p><br>
+        <p class="fs-4 text-dark" data-aos="fade-up" data-aos-delay="300">
+          Negotiation is like a friendly game of give-and-take to reach an agreement that works for everyone. This chapter will teach you how to negotiate like a pro!
+        </p>
+        <ul class="list-unstyled text-start d-inline-block fs-5" data-aos="fade-up" data-aos-delay="400">
+          <li><i class="bi bi-check-circle-fill text-success"></i> <b>What is negotiation?</b></li>
+          <li><i class="bi bi-check-circle-fill text-success"></i> <b>How to prepare and set goals</b></li>
+          <li><i class="bi bi-check-circle-fill text-success"></i> <b>Tips to negotiate successfully</b></li>
+        </ul>
+
+        <div class="mt-4">
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="500">
+            <h4 class="fw-bold text-primary">What is Negotiation?</h4>
+            <p class="fs-5">
+              Negotiation is a conversation where two or more people work together to find a solution that makes everyone happy. It’s about listening, compromising, and solving problems.
+            </p>
+            <div class="row align-items-center mt-3">
+              <div class="col-lg-5">
+                <img src="${negotiationImage}" class="img-fluid rounded shadow-lg" alt="Negotiation Image" data-aos="zoom-in" data-aos-delay="600">
+              </div>
+              <div class="col-lg-7">
+                <p class="fs-5">
+                  This image shows people discussing ideas around a table, working together to reach an agreement.
+                </p>
+              </div>
+            </div>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="700">
+            <h4 class="fw-bold text-primary">Prepare Thoroughly</h4>
+            <p class="fs-5">
+              Good preparation is the key to winning at negotiation. Here’s how to get ready:
+            </p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Do Your Homework:</b> Learn all the facts about the topic.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Know What Everyone Wants:</b> Figure out what’s important to you and the other side.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Respect Cultures:</b> Understand different traditions or ways of talking.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Learn About Money and Books:</b> Know the costs and read up on the topic.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Check the Rules:</b> Make sure you know any laws that apply.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Be Fair:</b> Always negotiate honestly and respectfully.</li>
+            </ul>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="800">
+            <h4 class="fw-bold text-primary">Set Clear Goals</h4>
+            <p class="fs-5">Having clear goals keeps you focused during negotiation:</p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Pick Your Top Goals:</b> Decide what matters most to you.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Use Numbers:</b> Set specific targets, like a price or deadline.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Know When to Walk Away:</b> Decide the point where you’ll stop if the deal isn’t good.</li>
+            </ul>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="900">
+            <h4 class="fw-bold text-primary">Negotiate Like a Pro</h4>
+            <p class="fs-5">Use these ideas to make your negotiation strong:</p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>BATNA (Best Backup Plan):</b> Know your next-best option if the talk fails.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>ZOPA (Agreement Zone):</b> Find the range where both sides can agree.</li>
+            </ul>
+          </div><br>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="1000">
+            <h4 class="fw-bold text-primary">Tips for Successful Negotiation</h4>
+            <p class="fs-5">Try these tricks to become a great negotiator:</p>
+            <ul class="list-unstyled text-start d-inline-block fs-5">
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Be Friendly:</b> Build trust with the other person.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Listen Carefully:</b> Really hear what the other side needs.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Stay Cool:</b> Keep calm to think clearly.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Get Creative:</b> Suggest new ideas to solve problems.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Use Silence:</b> Pause to let the other person talk or think.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Go Step by Step:</b> Break the talk into small parts to make progress.</li>
+              <li><i class="bi bi-check-circle-fill text-success"></i> <b>Watch Body Language:</b> Notice their tone or gestures to understand their feelings.</li>
+            </ul>
+            <p class="fs-5 mt-3">
+              These negotiation skills will help you work with others and get great results in school or life!
+            </p>
+          </div><br>
+          
+            
         </div>
       </section>`
   }

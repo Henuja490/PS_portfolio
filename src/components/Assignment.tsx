@@ -15,6 +15,7 @@ import Week7 from './assets/9.webp';
 import Week8 from './assets/week8.jpg'; 
 import Week9 from './assets/holiday_meal_142589503.webp'; 
 import Week10 from './assets/1709901302504 (1).png'; 
+import Week11 from './assets/Week11.jpeg'; 
 type BlogPost = {
   id: number;
   title: string;
@@ -100,6 +101,13 @@ const blogPosts: BlogPost[] = [
       author: 'Henuja Katuwapitiya',
       date: 'Week 10',
       image: Week10, // New blog image
+      authorImage: authorImage,
+    },{
+      id: 11,
+      title: 'Effective Negotiation Strategies',
+      author: 'Henuja Katuwapitiya',
+      date: 'Week 11',
+      image: Week11, // New blog image
       authorImage: authorImage,
     }
   
