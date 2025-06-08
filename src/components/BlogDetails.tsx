@@ -541,6 +541,13 @@ const blogPosts: BlogPost[] = [
               <li><i class="bi bi-check-circle-fill text-success"></i> Practice with mock interviews.</li>
             </ul>
           </div>
+          <div class="bg-white p-4 rounded shadow-lg" data-aos="fade-up" data-aos-delay="1100">
+            <h4 class="fw-bold text-primary">Interviews</h4>
+            <p class="fs-5 mt-3">
+              We have face some interviews with local companies.
+            </p>
+            <iframe src=${eleven} width="75%" height="600px" style="border: none" data-aos="fade-up" data-aos-delay="1200"></iframe>
+          </div>
         </div>
       </section>
     `,
