@@ -16,6 +16,7 @@ import seven from './assets/email.jpg';
 import eight from './assets/EMAIL2.jpg';
 import nine from './assets/Black_Doodle_Tools_for_Generating_Ideas_Mind_Map[1].png';
 import ten from './assets/1.pdf';
+import eleven from './assets/CamScanner 03-06-2025 19.15.pdf';
 import image7 from './assets/7.jpg';
 import image5 from './assets/5.jpg';
 import image8 from './assets/work.jpg';
@@ -614,7 +615,7 @@ const blogPosts: BlogPost[] = [
     content: `
       <section class="container mt-4" data-aos="fade-up">
         <h1 class="fw-bold text-primary text-center" data-aos="fade-up" data-aos-delay="100">Dining Etiquettes</h1>
-        <p class="text-muted text-center" data-aos="fade-up" data-aos-delay="200">By Miss Ishara Raviharee Weerasinghe</p><br>
+        <p class="text-muted text-center" data-aos="fade-up" data-aos-delay="200">By Miss Samudini Nagasena</p><br>
         <p class="fs-4 text-dark" data-aos="fade-up" data-aos-delay="300">
           Today’s professional skills lecture focused on Dining Etiquettes, covering the formal allocation of dining table settings and proper dining behavior.
         </p>
